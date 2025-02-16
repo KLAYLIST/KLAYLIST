@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLAYLIST</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">KLAYLIST</a></div>
+    <nav>
+      <button id="hamburger" class="hamburger">&#9776;</button>
+      <ul id="nav-items" class="nav-items">
+        <li><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#genres" class="dropdown-toggle">Content</a>
+            <ul class="dropdown-menu">
+              <li><a class="active" href="album-reviews.html">Album Reviews</a></li>
+              <li><a href="article.html">Articles</a></li>
+              <li><a href="#jazz">Matchups</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+      </ul>      
+    </nav>
+  </header>
+
+  <section id="reviews">
+        
+    <center><div class="subheading"><h1>Top 5 Albums This Year</h1></div></center>
+
+    <div class="review-content">
+
+        <div class="mrp-card">
+          <div class="background" style="background-image: url(covers/TheWeeknd/Hurry\ Up\ Tomorrow.jpg);"></div>
+          <div class="info">
+              <h3>Hurry Up Tomorrow</h3>
+              <p>The Weeknd</p>
+          </div>
+        </div>
+
+        <div class="mrp-card">
+            <a href="album-review pages/Balloonerism.html">
+            <div class="background" style="background-image: url(covers/MacMiller/Balloonerism.jpg);"></div>
+            <div class="info">
+                <h3>Balloonerism</h3>
+                <p>Mac Miller</p>
+            </div>
+            </a>
+        </div>
+        <div class="mrp-card">
+            <div class="background" style="background-image: url(covers/FKATwigs/Eusexua.jpg);"></div>
+            <div class="info">
+                <h3>EUSEXUA</h3>
+                <p>FKA Twigs</p>
+            </div>
+        </div>
+        <div class="mrp-card">
+          <div class="background" style="background-image: url(covers/JPEGMAFIA/ILDMLFYDC.jpg);"></div>
+          <div class="info">
+              <h3>I LAY DOWN MY LIFE FOR YOU (DC)</h3>
+              <p>JPEGMAFIA</p>
+          </div>
+      </div>
+      <div class="mrp-card">
+        <div class="background" style="background-image: url(ph.png);"></div>
+        <div class="info">
+            <h3>Coming Soon</h3>
+            <p>...</p>
+        </div>
+    </div>
+    </div>
+    
+<!-- Small Screen Scroller -->
+
+    <div class="scroll-wrapper1">
+      <div class="scroll-container1">
+
+          <div class="item">
+            <div class="mrp-card">
+              <a href="#">
+              <div class="background" style="background-image: url(covers/TheWeeknd/Hurry\ Up\ Tomorrow.jpg);"></div>
+              <div class="info">
+                  <h3>Hurry Up Tomorrow</h3>
+                  <p>The Weeknd</p>
+              </div>
+              </a>
+          </div>
+          </div>
+
+          <div class="item">
+            <div class="mrp-card">
+              <a href="album-review pages/Balloonerism.html">
+              <div class="background" style="background-image: url(covers/MacMiller/Balloonerism.jpg);"></div>
+              <div class="info">
+                  <h3>Balloonerism</h3>
+                  <p>Mac Miller</p>
+              </div>
+              </a>
+          </div>
+          </div>
+
+          <div class="item">
+            <div class="mrp-card">
+              <a href="#">
+              <div class="background" style="background-image: url(covers/FKATwigs/Eusexua.jpg);"></div>
+              <div class="info">
+                  <h3>EUSEXUA</h3>
+                  <p>FKA Twigs</p>
+              </div>
+              </a>
+          </div>
+          </div>
+
+          <div class="item">
+            <div class="mrp-card">
+              <a href="#">
+              <div class="background" style="background-image: url(covers/JPEGMAFIA/ILDMLFYDC.jpg);"></div>
+              <div class="info">
+                  <h3>I LAY DOWN MY LIFE FOR YOU (DC)</h3>
+                  <p>JPEGMAFIA</p>
+              </div>
+              </a>
+          </div>
+          </div>
+
+          <div class="item">
+            <div class="mrp-card">
+              <a href="#">
+              <div class="background" style="background-image: url(ph.png);"></div>
+              <div class="info">
+                  <h3>Coming Soon</h3>
+                  <p>...</p>
+              </div>
+              </a>
+          </div>
+          </div>
+
+          <div class="item">
+            <div class="mrp-card">
+              <a href="#">
+              <div class="background" style="background-image: url(ph.png);"></div>
+              <div class="info">
+                  <h3>Coming Soon</h3>
+                  <p>...</p>
+              </div>
+              </a>
+          </div>
+          </div>
+        </div>
+    </div>
+
+</section>
+
+      <section class="recent-reviews" id="reviews">
+
+        <!-- <div>
+          <button id="sortButton">Sort A-Z</button>
+        </div> -->
+        <section>
+
+          <div class="button-wrapper">
+            <button id="sortButton" class="main-button">Sort A-Z</button>
+            <!-- <button id="sortArtistButton" class="main-button">Sort by Artist A-Z</button> -->
+            <select id="genreFilter" class="main-button">
+                <option value="all">All Genres</option>
+                <option value="hip-hop">Hip-Hop</option>
+                <option value="r&b">R&B</option>
+                <option value="soul">Soul</option>
+                <option value="indie">Indie</option>
+                <option value="k-pop">K-Pop</option>
+                <option value="rock">Rock</option>
+                <option value="metal">Metal</option>
+                <option value="electronic">Electronic</option>
+            </select>
+          </div>
+
+
+        <div id="albumContainer" class="flex5">
+
+          <div class="grid-review-card" data-title="4eva Is A Mighty Long Time - Big K.R.I.T" data-genre="hip-hop">
+            <img src="covers/Big K.R.I.T/4IAMLT.png" alt="Album 1">
+            <h3>4eva Is A Mighty Long Time</h3>
+            <p>Big K.R.I.T</p>
+          </div>
+
+          <div class="grid-review-card" data-title="4 Your Eyez Only - J. Cole" data-genre="hip-hop">
+            <img src="covers/J. Cole/4YEO.png" alt="Album 1">
+            <h3>4 Your Eyez Only</h3>
+            <p>J. Cole</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Baduizm - Erykah Badu" data-genre="r&b">
+            <img src="covers/Erykah Badu/Baduizm.png" alt="Album 1">
+            <h3>Baduizm</h3>
+            <p>Erykah Badu</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Balloonerism - Mac Miller" data-genre="hip-hop">
+            <a href="album-review pages/Balloonerism.html"><img src="covers/MacMiller/Balloonerism.jpg" alt="Album 1">
+            <h3>Balloonerism</h3>
+            <p>Mac Miller</p></a>
+          </div>
+
+          <div class="grid-review-card" data-title="Because The Internet - Childish Gambino" data-genre="hip-hop">
+            <img src="covers/Childish Gambino/BTI.png" alt="Album 1">
+            <h3>Because The Internet</h3>
+            <p>Childish Gambino</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Beautiful Thugger Girls - Young Thug" data-genre="hip-hop">
+            <img src="covers/Young Thug/BTG.png" alt="Album 1">
+            <h3>Beautiful Thugger Girls</h3>
+            <p>Young Thug</p>
+          </div>
+
+          <div class="grid-review-card" data-title="BLUE LIPS - ScHoolboy Q" data-genre="hip-hop">
+            <img src="covers/BLUE LIPS.png" alt="Album 1">
+            <h3>BLUE LIPS</h3>
+            <p>ScHoolboy Q</p>
+          </div>
+
+          <div class="grid-review-card" data-title="CHROMAKOPIA - Tyler, The Creator" data-genre="hip-hop">
+            <a href="album-review pages/CHROMAKOPIA.html">
+            <img src="covers/CHROMAKOPIA.png" alt="Album 1">
+            <h3>CHROMAKOPIA</h3>
+            <p>Tyler, The Creator</p>
+            </a>
+          </div>
+
+          <div class="grid-review-card" data-title="Dark Times - Vince Staples" data-genre="hip-hop">
+            <img src="covers/Dark Times.png" alt="Album 1">
+            <h3>Dark Times</h3>
+            <p>Vince Staples</p>
+          </div>
+
+          <div class="grid-review-card" data-title="DeGaulle Manor - Xephyrine" data-genre="r&b">
+            <img src="covers/Xephyrine/DM.jpg" alt="Album 1">
+            <h3>DeGaulle Manor</h3>
+            <p>Xephyrine</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Some Sexy Songs 4 U - PARTYNEXTDOOR & Drake" data-genre="r&b">
+            <img src="covers/PND/SSSFU.jpg" alt="Album 1">
+            <h3>$ome $exy $ongs 4 U</h3>
+            <p>PARTYNEXTDOOR & Drake</p>
+          </div>
+
+          <div class="grid-review-card" data-title="EUSEXUA - FKA Twigs" data-genre="electronic">
+            <img src="covers/FKATwigs/Eusexua.jpg" alt="Album 1">
+            <h3>EUSEXUA</h3>
+            <p>FKA Twigs</p>
+          </div>
+          
+          <div class="grid-review-card" data-title="From Zero - Linkin Park" data-genre="metal">
+            <img src="covers/Linkin Park/From Zero.jpg" alt="Album 1">
+            <h3>From Zero</h3>
+            <p>Linkin Park</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Dirt - Alice In Chains" data-genre="metal">
+            <img src="covers/AliceInChains/Dirt.jpg" alt="Album 1">
+            <h3>Dirt</h3>
+            <p>Alice In Chains</p>
+          </div>
+
+          <div class="grid-review-card" data-title="White Horse - Deftones" data-genre="metal">
+            <img src="covers/Deftones/White Horse.jpg" alt="Album 1">
+            <h3>White Horse</h3>
+            <p>Deftones</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Ghost Reveries - Opeth" data-genre="metal">
+            <img src="covers/Opeth/Ghost Reveries.jpg" alt="Album 1">
+            <h3>Ghost Reveries</h3>
+            <p>Opeth</p>
+          </div> 
+
+          <div class="grid-review-card" data-title="GNX - Kendrick Lamar" data-genre="hip-hop">
+            <img src="covers/GNX.png" alt="Album 1">
+            <h3>GNX</h3>
+            <p>Kendrick Lamar</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Hurry Up Tomorrow - The Weeknd" data-genre="r&b">
+            <img src="covers/TheWeeknd/Hurry Up Tomorrow.jpg" alt="Album 1">
+            <h3>Hurry Up Tomorrow</h3>
+            <p>The Weeknd</p>
+          </div>
+
+          <div class="grid-review-card" data-title="I DID - Yves" data-genre="r&b">
+            <img src="covers/Yves/I DID.jpg" alt="Album 1">
+            <h3>I DID</h3>
+            <p>Yves</p>
+          </div>
+          
+          <div class="grid-review-card" data-title="I LAY MY LIFE DOWN FOR YOU - JPEGMAFIA" data-genre="hip-hop">
+            <img src="covers/i lay my life down for you.png" alt="Album 1">
+            <h3>I LAY MY LIFE DOWN FOR YOU</h3>
+            <p>JPEGMAFIA</p>
+          </div>
+
+          <div class="grid-review-card" data-title="It's Dark And Hell Is Hot - DMX" data-genre="hip-hop">
+            <img src="covers/DMX/IDAHIS.png" alt="Album 1">
+            <h3>It's Dark And Hell Is Hot</h3>
+            <p>DMX</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Letter To Myself - TAEYEON" data-genre="k-pop">
+            <img src="covers/TAEYEON/Letter To Myself.jpg" alt="Album 1">
+            <h3>Letter To Myself</h3>
+            <p>TAEYEON</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Positive - PENTAGON" data-genre="k-pop">
+            <img src="covers/Pentagon/Positive.jpg" alt="Album 1">
+            <h3>Positive</h3>
+            <p>PENTAGON</p>
+          </div>
+
+          <div class="grid-review-card" data-title="ROSIE - Rosé" data-genre="k-pop">
+            <img src="covers/Rosé/ROSIE.jpg" alt="Album 1">
+            <h3>ROSIE</h3>
+            <p>Rosé</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Get Up - NewJeans" data-genre="k-pop">
+            <img src="covers/NewJeans/Get Up.jpg" alt="Album 1">
+            <h3>Get Up</h3>
+            <p>NewJeans</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Mirrorland - EARTHGANG" data-genre="hip-hop">
+            <img src="covers/EARTHGANG/Mirrorland.png" alt="Album 1">
+            <h3>Mirrorland</h3>
+            <p>EarthGang</p>
+          </div>
+
+          <div class="grid-review-card" data-title="My Cherie Amour - Stevie Wonder" data-genre="soul">
+            <img src="covers/Stevie Wonder/My Cherie Amour.png" alt="Album 1">
+            <h3>My Cherie Amour</h3>
+            <p>Stevie Wonder</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Pieces Of A Man - Gil Scott-Heron" data-genre="soul">
+            <img src="covers/GilScottHeron/Pieces Of A Man.jpg" alt="Album 1">
+            <h3>Pieces Of A Man</h3>
+            <p>Gil Scott-Heron</p>
+          </div>
+
+          <div class="grid-review-card" data-title="What's Going On - Marvin Gaye" data-genre="soul">
+            <img src="covers/MarvinGaye/What's Going On.jpg" alt="Album 1">
+            <h3>What's Going On</h3>
+            <p>Marvin Gaye</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Songs In The Key Of Life - Stevie Wonder" data-genre="soul">
+            <img src="covers/Stevie Wonder/Songs In The Key Of Life.jpg" alt="Album 1">
+            <h3>Songs In The Key Of Life</h3>
+            <p>Stevie Wonder</p>
+          </div>
+
+          <div class="grid-review-card" data-title="NYXNOVA - Xella Red" data-genre="rock">
+            <img src="covers/Xella Red/NYXNOVA.jpg" alt="Album 1">
+            <h3>NYXNOVA</h3>
+            <p>Xella Red</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Electric Ladyland - Jimi Hendrix" data-genre="rock">
+            <img src="covers/JimiHendrix/Electric Ladyland.jpg" alt="Album 1">
+            <h3>Electric Ladyland</h3>
+            <p>Jimi Hendrix</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Rumors - Fleetwood Mac" data-genre="rock">
+            <img src="covers/FleetwoodMac/Rumors.jpg" alt="Album 1">
+            <h3>Rumors</h3>
+            <p>Fleetwood Mac</p>
+          </div>
+
+          <div class="grid-review-card" data-title="7 Songs For Spiders - Dax Riggs" data-genre="rock">
+            <img src="covers/DaxRiggs/7 Songs For Spiders.jpg" alt="Album 1">
+            <h3>7 Songs For Spiders</h3>
+            <p>Dax Riggs</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Plastic Beach - Gorillaz" data-genre="indie">
+            <img src="covers/Gorillaz/Plastic Beach.png" alt="Album 1">
+            <h3>Plastic Beach</h3>
+            <p>Gorillaz</p>
+          </div>
+
+          <div class="grid-review-card" data-title="In The Aeroplane Over the Sea - Neutral Milk Hotel" data-genre="indie">
+            <img src="covers/NeutralMilkHotel/In The Aeroplane Over The Sea.jpg" alt="Album 1">
+            <h3>In The Aeroplane Over the Sea</h3>
+            <p>Neutral Milk Hotel</p>
+          </div>
+
+          <div class="grid-review-card" data-title="The Queen Is Dead - The Smiths" data-genre="indie">
+            <img src="covers/TheSmiths/The Queen Is Dead.jpg" alt="Album 1">
+            <h3>The Queen Is Dead</h3>
+            <p>The Smiths</p>
+          </div>
+
+          <div class="grid-review-card" data-title="AM - Arctic Monkeys" data-genre="indie">
+            <img src="covers/ArcticMonkeys/AM.jpg" alt="Album 1">
+            <h3>AM</h3>
+            <p>Arctic Monkeys</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Random Access Memories - Daft Punk" data-genre="electronic">
+            <img src="covers/Daft Punk/RAM.png" alt="Album 1">
+            <h3>Random Access Memories</h3>
+            <p>Daft Punk</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Post - Björk" data-genre="electronic">
+            <img src="covers/Björk/Post.jpg" alt="Album 1">
+            <h3>Post</h3>
+            <p>Björk</p>
+          </div>
+
+          <div class="grid-review-card" data-title="Imaginal Disc - Magdalena Bay" data-genre="electronic">
+            <img src="covers/MagdalenaBay/Imaginal Disc.jpg" alt="Album 1">
+            <h3>Imaginal Disc</h3>
+            <p>Magdalena Bay</p>
+          </div>
+
+          <div id="album-card" class="grid-review-card" data-title="The Party Never Ends - Juice WRLD" data-genre="hip-hop">
+              <img src="covers/Juice WRLD/TPNE.jpg" alt="Album 1">
+              <h3>The Party Never Ends</h3>
+              <p>Juice WRLD</p>
+          </div>
+
+        </div>
+      </section>
+      </section>
+      
+      <footer>
+        <p>©<span id="year"></span> KLAYLIST</p>
+        <p>Follow me on <a href="https://www.instagram.com/itsjust_klaymorr/?locale=gb&hl=am-et">Instagram</a></p>
+      </footer>
+
+      <script src="./script.js"></script>
+
+      <script> 
+          document.addEventListener("DOMContentLoaded", function () {
+              const container = document.getElementById("albumContainer");
+              const sortButton = document.getElementById("sortButton");
+
+              sortButton.addEventListener("click", function () {
+                  const cards = Array.from(container.getElementsByClassName("grid-review-card"));
+
+                  // Toggle sorting direction
+                  const ascending = sortButton.dataset.ascending === "true";
+                  sortButton.dataset.ascending = !ascending;
+
+                  // Sort based on the data-title attribute
+                  cards.sort((a, b) => {
+                      return ascending 
+                          ? b.dataset.title.localeCompare(a.dataset.title)  // Z-A
+                          : a.dataset.title.localeCompare(b.dataset.title); // A-Z
+                  });
+
+                  // Re-append the sorted elements
+                  cards.forEach(card => container.appendChild(card));
+
+                  // Update button text
+                  sortButton.textContent = ascending ? "Sort Z-A" : "Sort A-Z";
+              });
+          });
+      </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const genreFilter = document.getElementById("genreFilter");
+      const cards = document.querySelectorAll(".grid-review-card");
+
+      genreFilter.addEventListener("change", function () {
+          const selectedGenre = genreFilter.value;
+
+          cards.forEach(card => {
+              const cardGenre = card.dataset.genre;
+
+              if (selectedGenre === "all" || cardGenre === selectedGenre) {
+                  card.style.display = "block";
+              } else {
+                  card.style.display = "none";
+              }
+          });
+      });
+    });
+</script>
+
+</body>
+</html>

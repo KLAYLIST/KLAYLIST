@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLAYLIST</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">KLAYLIST</a></div>
+        <nav>
+          <button id="hamburger" class="hamburger">&#9776;</button>
+          <ul id="nav-items" class="nav-items">
+            <li><a href="#home" class="active">Home</a></li>
+              <li class="dropdown">
+                <a href="#genres" class="dropdown-toggle">Content</a>
+                <ul class="dropdown-menu">
+                  <li><a href="album-reviews.html">Album Reviews</a></li>
+                  <li><a href="#pop">Artist Reviews</a></li>
+                  <li><a href="article.html">Articles</a></li>
+                  <li><a href="#jazz">Matchups</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">About</a></li>
+              <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+          </ul>      
+        </nav>
+      </header>
+
+    <section id="reviews">
+        
+        <div class="subheading"><h1>Top 5 Albums This Year</h1></div>
+
+        <div class="review-content">
+
+            <div class="mrp-card">
+                <a href="reviews-albums/CHROMAKOPIA.html">
+                <div class="background" style="background-image: url(covers/CHROMAKOPIA.png);"></div>
+                <div class="info">
+                    <h3>CHROMAKOPIA</h3>
+                    <p>Tyler, The Creator</p>
+                </div>
+                </a>
+            </div>
+            <div class="mrp-card">
+                <div class="background" style="background-image: url(covers/GNX.png);"></div>
+                <div class="info">
+                    <h3>GNX</h3>
+                    <p>Kendrick Lamar</p>
+                </div>
+            </div>
+            <div class="mrp-card">
+                <div class="background" style="background-image: url(covers/i\ lay\ my\ life\ down\ for\ you.png);"></div>
+                <div class="info">
+                    <h3>ILDMLFY</h3>
+                    <p>JPEGMAFIA</p>
+                </div>
+            </div>
+            <div class="mrp-card">
+                <a href="reviews-albums/BLUE LIPS.html">
+                <div class="background" style="background-image: url(covers/BLUE\ LIPS.png);"></div>
+                <div class="info">
+                    <h3>BLUE LIPS</h3>
+                    <p>ScHoolboy Q</p>
+                </div>
+                </a>
+            </div>
+            <div class="mrp-card">
+                <div class="background" style="background-image: url(covers/Dark\ Times.png);"></div>
+                <div class="info">
+                    <h3>Dark Times</h3>
+                    <p>Vince Staples</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="review-area">
+
+    <div class="subheading"><h1>Album Reviews</h1></div>
+
+    <div class="categories">
+        <label for="genre-select">Choose a genre:</label>
+        <select id="genre-select">
+            <option value="all">All</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="hiphop">Hip-Hop</option>
+        </select>
+    </div>
+  
+    <div class="review-content">
+
+        <div class="card rock" data-title="Rock Album Review">
+        <div class="mrp2-card">
+            <div class="mrp2-card-info">
+                <img src="ph.png">
+                <h3>Album Name</h3>
+                <p>Artist Name</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="card pop" data-title="Pop Album Review">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+         </div>
+
+         <div class="card jazz" data-title="Jazz Album Review">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="card pop" data-title="Rock Album Review">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="card jazz">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="card hiphop" data-title="HipHop Album Review">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3 class="card-title">Album Name</h3>
+                    <p class="card-content">Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+         <div class="card rock">
+        <div class="mrp2-card">
+            <div class="mrp2-card-info">
+                <img src="ph.png">
+                <h3>Album Name</h3>
+                <p>Artist Name</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="card pop">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+         </div>
+
+         <div class="card jazz">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="card pop">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="card jazz">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="card hiphop">
+            <div class="mrp2-card">
+                <div class="mrp2-card-info">
+                    <img src="ph.png">
+                    <h3>Album Name</h3>
+                    <p>Artist Name</p>
+                </div>
+        </div>
+        </div>       
+
+        
+
+    </div>
+</section>
+
+<section id="review-area">
+
+    <div class="subheading"><h1>Artist Reviews</h1></div>
+
+    <div class="categories">
+        <label for="genre-select">Choose a genre:</label>
+        <select id="genre-select">
+            <option value="all">All</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="hiphop">Hip-Hop</option>
+        </select>
+    </div>
+  
+    <div class="review-content">
+
+        
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+        <div class="mrp-card">
+            <div class="background" style="background-image: url('ph.png');"></div>
+            <div class="info">
+                <h3>Artist Name</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 KLAYLIST. All rights reserved.</p>
+    <p>Follow me on <a href="https://www.instagram.com/itsjust_klaymorr/?locale=gb&hl=am-et">Instagram</a></p>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

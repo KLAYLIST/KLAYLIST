@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLAYLIST</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">KLAYLIST</a></div>
+    <nav>
+      <button id="hamburger" class="hamburger">&#9776;</button>
+      <ul id="nav-items" class="nav-items">
+        <li><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#genres" class="dropdown-toggle">Content</a>
+            <ul class="dropdown-menu">
+              <li><a class="active" href="album-reviews.html">Album Reviews</a></li>
+              <li><a href="article.html">Articles</a></li>
+              <li><a href="#jazz">Matchups</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+      </ul>      
+    </nav>
+  </header>
+
+      <section class="recent-reviews" id="reviews">
+        <h1 class="sub-head">Recent Articles</h1><br>
+           <div class="flex6">     
+                    <div class="grid-review-card">
+                      <a href="Rating Every Single PENTAGON Project.html">
+                        <img src="artists/PENTAGON2.jpg">
+                        <h3>Rating Every Single PENTAGON Project</h3>
+                        <a href="Rating Every Single PENTAGON Project.html">Read More</a>
+                      </a>
+                    </div>
+            
+                    <div class="grid-review-card">
+                        <img src="article-imgs/Ken And Friends Pop Out.png">
+                        <div class="article-image"></div>
+                        <h3>The West Coast: Hip-Hop's 2024 MVP</h3>
+                        <a href="#">Coming Soon</a>
+                    </div>
+            
+                    <div class="grid-review-card">
+                        <img src="article-imgs/HYLICS.jpg">
+                        <h3>Hylics: My Favorite Video Game OST</h3>
+                        <a href="#">Coming Soon</a>
+                    </div>
+
+                    <div class="grid-review-card">
+                      <img src="article-imgs/Posthumous.png">
+                      <h3>The Issue Of Posthumous Projects</h3>
+                      <a href="#">Coming Soon</a>
+                  </div>
+                
+            </div>
+      </section>
+
+      <script src="script.js"></script>
+
+</body>
+</html>
