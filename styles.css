@@ -88,6 +88,10 @@
     text-decoration: underline;
   }
   
+  h1 {
+    background: none;
+  }
+
   .orienta-regular {
     font-family: "Orienta", sans-serif;
     font-weight: 400;
@@ -121,7 +125,8 @@
     text-decoration: none;
     color: #098e00;
   }
-  
+
+
   header nav ul {
     list-style: none;
     display: flex;
@@ -2001,7 +2006,7 @@
   display: inline-block;
 }
 
-.ify-content, h1 {
+.ify-content {
   background-color: #036f03;
   padding: 5px;
   border-radius: 5%;
