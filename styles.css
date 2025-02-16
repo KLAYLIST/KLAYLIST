@@ -2533,7 +2533,7 @@ footer {
       margin: 0 auto;
       top: -6rem;
       margin-top: 270px;
-      max-width: 100%;
+      min-width: 100%;
     }
   }
 
