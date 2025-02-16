@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLAYLIST</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">KLAYLIST</a></div>
+    <nav>
+      <button id="hamburger" class="hamburger">&#9776;</button>
+      <ul id="nav-items" class="nav-items">
+        <li><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#genres" class="dropdown-toggle">Content</a>
+            <ul class="dropdown-menu">
+              <li><a class="active" href="album-reviews.html">Album Reviews</a></li>
+              <li><a href="article.html">Articles</a></li>
+              <li><a href="#jazz">Matchups</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+      </ul>      
+    </nav>
+  </header>
+
+    <div class="overwrap">
+        <div class="hero">
+            <h1>KLAYLIST</h1>
+            <p>THE WORLD NEEDS MORR</p>
+        </div>
+    </div>
+
+  <main>
+    <div class="flex">
+    <section class="featured">
+      <!-- <h1 class="sub-head">Featured Review</h1> -->
+      <div class="featured-item">
+        <img id="featured-image" src="ph.png" alt="Featured Album">
+        <div>
+          <h2 id="featured-title">Album Title</h2>
+          <p id="featured-description">A short description of the album review goes here.</p>
+          <a href="#read-more" id="featured-link" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="side-hero">
+        <h1 class="sub-head">Album Suggestion</h1>
+        <section id="music-box">
+          <div class="music-box-container">
+              <div class="music-box-content">
+                  <br>
+                  <button class="fancier-button" id="randomAlbum" onclick="randomAlbum()">Generate Album</button>
+              </div>
+          </div>
+      </section>
+    </section>
+    </div>
+
+    <section class="recent-reviews" id="reviews">
+      <h1 class="sub-head">Featured Reviews</h1><br>
+      <div class="review-grid">
+        <div class="review-card">
+          <img src="covers/Juice WRLD/TPNE.jpg" alt="Album 1">
+          <h3>The Party Never Ends</h3>
+          <p>Juice WRLD</p>
+          <a href="#read-more">Read More</a>
+        </div>
+        <div class="review-card">
+          <img src="covers/TAEYEON/Letter To Myself.jpg" alt="Album 2">
+          <h3>Letter To Myself</h3>
+          <p>TAEYEON</p>
+          <a href="#read-more">Read More</a>
+        </div>
+        <div class="review-card">
+          <img src="covers/Yves/I DID.jpg" alt="Album 3">
+          <h3>I Did</h3>
+          <p>Yves</p>
+          <a href="#read-more">Read More</a>
+        </div>
+      </div>
+
+      <center><a href="album-reviews.html"><button class="main-button">More Reviews</button></a></center>
+
+    </section><br>
+
+    <section class="recent-reviews" id="reviews">
+      <h1 class="sub-head">Recent Articles</h1><br>
+      <div class="review-grid">
+        <div class="review-card">
+          <img src="artists/PENTAGON2.jpg">
+          <h3>Rating Every Single PENTAGON Project</h3>
+          <a href="Rating Every Single PENTAGON Project.html">Read More</a>
+        </div>
+
+        <div class="review-card">
+          <img src="article-imgs/Ken And Friends Pop Out.png">
+          <div class="article-image"></div>
+          <h3>Is West Coast Hip-Hop Making A Comeback?</h3>
+          <a href="#">Coming Soon</a>
+        </div>
+
+        <div class="review-card">
+          <img src="article-imgs/HYLICS.jpg">
+          <h3>Hylics: My Favorite Video Game OST</h3>
+          <a href="#">Coming Soon</a>
+        </div>
+      </div>
+      <center><a href="article.html"><button class="main-button">More Articles</button></a></center>
+    </section>
+
+
+  <section id="underground">
+
+    <div class="underground-section">
+    
+    <h1 class="sub-head">Featured Underground</h1><br>
+  <div class="flex">
+    <div class="ug-card">
+        <img src="../KLAYLIST/covers/Xella Red/NYXNOVA.jpg" alt="Album 3">
+        <h3>NYXNOVA</h3>
+        <p>Xella Red</p>
+        <a href="https://open.spotify.com/album/5URm3zXRtRq6Fi58LunsWv">Listen Here</a>
+    </div>
+
+    <div class="ug-card">
+      <img src="../KLAYLIST/covers/Xephyrine/DM.jpg" alt="Album 3">
+      <h3>DeGaulle Manor</h3>
+      <p>Xephyrine</p>
+      <a href="https://open.spotify.com/album/3RTLxjYDK3MXFeSkwicnGU">Listen Here</a>
+   </div>
+
+    </div>
+  </div>
+  </section>
+</main>
+
+<footer>
+  <p>©<span id="year"></span> KLAYLIST</p>
+  <p>Follow me on <a href="https://www.instagram.com/itsjust_klaymorr/?locale=gb&hl=am-et">Instagram</a></p>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
