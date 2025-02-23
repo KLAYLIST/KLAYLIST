@@ -12,8 +12,8 @@
     --text-color: #000000;
     --text-color2: #ffffff;
     --sec-text: #000000;
-    --header-bg: #111;
-    --header-text: #fff;
+    --header-bg: #ffffff;
+    --header-text: #c1c1c1;
     --card-bg: #fff;
     --btn-bg: #000000;
     --btn-text: #fff;
@@ -27,10 +27,12 @@
     --box-text: #ffffff;
     --box-text2: #000000;
     --sub: #000000;
+    --sub2: #000000;
     --mono: #000000;
     --card-border: #064906;
     --sqr-box: rgb(187, 187, 187);
     --diso-text: #ff0000;
+    --grayscale: 100%
   }
   
   /* Dark Mode Variables */
@@ -54,10 +56,12 @@
     --box-text: #ffffff;
     --box-text2: #ffffff;
     --sub: #fff;
+    --sub2: #036f03;
     --mono: #ffffff;
     --card-border: #ffffff;
     --sqr-box: #000000;
     --diso-text: #6fff00;
+    --grayscale: 0%
   } 
 
   html, body {
@@ -80,14 +84,11 @@
     transition: .5s ease-in-out;
     max-width: 100%;
   }
+
   a {
     text-decoration: none;
     color: var(--link-color);
   }
-  a:hover {
-    text-decoration: underline;
-  }
-  
 
   .orienta-regular {
     font-family: "Orienta", sans-serif;
@@ -190,6 +191,10 @@
   z-index: 2;
 }
 
+.nav-items a {
+  color: var(--sub);
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: block; /* Show hamburger on smaller screens */
@@ -218,6 +223,7 @@
 .sub-head {
   color: var(--sub);
   text-align: center;
+  font-family: 'Orienta';
 }
 
         /* Card styling */
@@ -266,6 +272,7 @@
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
+    filter: grayscale(var(--grayscale));
   }
   
   .hero p {
@@ -501,6 +508,98 @@
     }
   }
 
+/* Search CSS */
+
+#searchbar {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#search {
+  padding: 10px;
+  margin: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  font-family: 'Orienta';
+}
+
+.review-search {
+  margin: 20px auto;
+  width: 80%;
+}
+input {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+.genre-filters button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.genre-filters button.active {
+  background-color: var(--box-color);
+}
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.review-item {
+  width: 300px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #098e00;
+  border-radius: 5px;
+  text-align: left;
+}
+.hidden {
+  display: none;
+}
+
+#albumResults {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#albumResults .album {
+  flex: 1 1 calc(33.33% - 20px);
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 300px;
+  font-size: 15px;
+  margin-top: 20px;
+  background-color: var(--sub2);
+  border-radius: 2%;
+  max-width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+#albumResults a {
+  color: white;
+}
+
+#albumResults .album img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  object-fit: cover;
+}
+
 /* S-Side Section */
 
   .s-side img {
@@ -727,7 +826,6 @@
     padding: 10px;
     border-radius: 1.5rem;
     background-color: var(--bg-color);
-    text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -748,12 +846,14 @@
 }
 
 .mrp-card h3 {
-    font-size: 1.5rem;
+    font-size: large;
+    text-align: center;
 }
 
 .mrp-card p {
     font-size: 1rem;
     margin-top: 0.5rem;
+    text-align: center;
 }
 
 .mrp2-card {
@@ -803,6 +903,7 @@
   border-radius: 8px;
   margin: .5rem;
   padding: 0.5rem;
+  margin-top: 2.2rem;
 }
 
 /* Category Bard */
@@ -839,7 +940,7 @@
 
       select:focus {
           outline: none;
-          border-color: #007bff;
+          border-color: #096d13;
           background-color: #e9ecef;
       }
 
@@ -1130,12 +1231,12 @@
   }
   
   .front-card {
-    background-image: url(klaymorr.png);
+    background-image: url(klay1.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     border-style: solid;
-    border-color: var(--card-border);
+    border-color: var(--sub2);
     border-width: 10px;
     flex-direction: column;
     justify-content: center;
@@ -1146,7 +1247,7 @@
   }
 
   .front-card:hover {
-    box-shadow: 0px 0px 50px #278801;
+    box-shadow: 0px 0px 50px var(--sub2);
   }
 
   .front-card img.hidden {
@@ -1334,7 +1435,7 @@
 
 
 /* Tablet Size (for screens 768px and smaller) */
-@media (max-width: 768px) {
+@media (max-width: 1253px) {
   .spin-card {
     width: 20rem;
     height: 32rem;
@@ -1450,7 +1551,7 @@
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 822px) {
   #spin-card {
     display: block;
     width: 100%;
@@ -1680,7 +1781,7 @@
   margin-top: 2rem;
   padding: 10px;
   margin-bottom: 2rem;
-  border-radius: 2%;
+  border-radius: 8px;
   /* box-shadow: 2px 2px 10px rgba(97, 96, 96); */
   display: inline-block;
 }
@@ -1835,7 +1936,7 @@
   position: absolute;
   max-width: 800px;
   right: 3.3rem;
-  top: 6.5rem;
+  top: 7.5rem;
   color: var(--text-color2);
 }
 
@@ -1900,7 +2001,7 @@
   position: absolute;
   max-width: 800px;
   right: 1.7rem;
-  bottom: -4rem;
+  bottom: -7rem;
   color: var(--text-color2);
 }
 
@@ -1957,7 +2058,7 @@
   font-weight: 900;
   width: 100%;
   height: 200px;
-  background-color: #036f03;
+  background-color: var(--sub2);
   color: white;
   cursor: pointer;
   border-radius: 10px;
@@ -2092,6 +2193,34 @@ footer {
   }
   .music-box-content button  {
     font-size: small;
+  }
+
+  #albumResults {
+    display: inline-block;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  #albumResults .album {
+    flex: 1 1 calc(33.33% - 20px);
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 300px;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: var(--sub2);
+    border-radius: 2%;
+    max-width: 200px;
+    padding: 10px;
+  }
+  
+  #albumResults .album img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    object-fit: cover;
   }
 
 }

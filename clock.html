@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <style>
+
+    :root {
+        --main-color: #700202;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: black;
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 1em;
+        border-radius: 2%;
+        transition: .3s ease-in-out;
+        border-style: solid;
+        border-color: var(--main-color);
+        filter: grayscale(100%);
+        opacity: 0%;
+    }
+
+    img:hover {
+        box-shadow: 0px 0px 30px var(--main-color);
+    }
+
+
+    img.in-view {
+        filter: grayscale(0%);
+        opacity: 100%;
+    }
+    
+    #countdown {
+      font-family: "Tiny5", serif;
+      font-size: 90px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #ffffff;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-content {
+        display: flex;
+        background-color: var(--main-color);
+        border-radius: 2%;
+        padding: 100px;
+        margin: 20px;
+        position: relative;
+        top: 0px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery {
+        columns: 300px;
+        margin-top: 2em;
+    }
+
+  </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Londrina+Outline&family=The+Girl+Next+Door&family=Tiny5&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container"> 
+        <div class="container-content">
+            <!-- <h1>Countdown to Your Date</h1> -->
+            <div id="countdown"></div>
+        </div>
+    </div> 
+
+    <div class="gallery">
+        <img src="Countdown/Countdown/jpgs/sunrisefit.jpg">
+        <img src="Countdown/Countdown/jpgs/sky5.png">
+        <img src="Countdown/Countdown/jpgs/holiday.jpg">
+        <img src="Countdown/Countdown/mirrorpic2.jpg">
+        <img src="Countdown/Countdown/jpgs/smoke.jpg">
+        <img src="Countdown/Countdown/jpgs/sky7.png">
+        <img src="Countdown/Countdown/iceskating2.jpg">
+        <img src="Countdown/Countdown/halluc.GIF">
+        <img src="Countdown/Countdown/jpgs/jaylan.jpg">
+        <img src="Countdown/Countdown/jpgs/tessnoli.jpg">
+        <img src="Countdown/Countdown/jpgs/tophat.jpg">
+        <img src="Countdown/Countdown/jpgs/drinks.jpg">
+        <img src="Countdown/Countdown/jpgs/mirror.jpg">
+        <img src="Countdown/Countdown/jpgs/scary.jpg">
+        <img src="Countdown/Countdown/jpgs/poet.jpg">
+        <img src="Countdown/Countdown/jpgs/pigtails.jpg">
+        <img src="Countdown/Countdown/jpgs/mirrorpic1.jpg">
+        <img src="Countdown/Countdown/jpgs/handdrawing.jpg">
+        <img src="Countdown/Countdown/jpgs/sky1.png">
+        <img src="Countdown/Countdown/jpgs/venomlocks.jpg">
+        <img src="Countdown/Countdown/jpgs/clerk.jpg">
+        <img src="Countdown/Countdown/dallas1.JPG">
+        <img src="Countdown/Countdown/dallas2.JPG">
+        <img src="Countdown/Countdown/dallas3.JPG">
+        <img src="Countdown/Countdown/The Man.GIF">
+        <img src="Countdown/Countdown/hocoselfie.JPG">
+        <img src="Countdown/Countdown/fashionshow1.jpg">
+        <img src="Countdown/Countdown/fashionshow2.jpg">
+        <img src="Countdown/Countdown/fashionshow3.jpg">
+        <img src="Countdown/Countdown/fashionshow4.JPG">
+        <img src="Countdown/Countdown/fashionshow5.JPG">
+        <img src="Countdown/Countdown/fashionshow6.JPG">
+        <img src="Countdown/Countdown/fireeee.JPG">
+        <img src="Countdown/Countdown/swamp.GIF">
+        <img src="Countdown/Countdown/dramapic.JPG">
+        <img src="Countdown/Countdown/xanandklay.JPG">
+        <img src="Countdown/Countdown/klayandx.JPG">
+        <img src="Countdown/Countdown/duality.GIF">
+        <img src="Countdown/Countdown/jpgs/sky2.png">
+        <img src="Countdown/Countdown/klaymorrwashere.JPG">
+        <img src="Countdown/Countdown/ocdrawing1.JPG">
+        <img src="Countdown/Countdown/ocdrawing2.JPG">
+        <img src="Countdown/Countdown/ssbeanie.jpg">
+        <img src="Countdown/Countdown/hocofit1.jpg">
+        <img src="Countdown/Countdown/iceskating1.jpg">
+        <img src="Countdown/Countdown/iceskating2.jpg">
+        <img src="Countdown/Countdown/iceskating3.jpg">
+        <a href="https://open.spotify.com/playlist/1J7dF5zBMKLzz4hY0EsOZX?si=5e8df87a3cc44354"><img style="border-color: white;" src="Countdown/Countdown/MG2.JPG"></a>
+        <img src="Countdown/Countdown/mrjudd.jpg">
+        <img src="Countdown/Countdown/parkjump.JPG">
+        <img src="Countdown/Countdown/sadboy.gif.GIF">
+        <img src="Countdown/Countdown/jpgs/sky4.png">
+        <img src="Countdown/Countdown/tessaura.jpg">
+        <img src="Countdown/Countdown/lockedin.JPG">
+        <img src="Countdown/Countdown/hbc.JPG">
+        <img src="Countdown/Countdown/japanarc.gif">
+        <img src="Countdown/Countdown/groupselfie.png">
+        <img src="Countdown/Countdown/jameere.JPG">
+        <img src="Countdown/Countdown/jpgs/sky3.png">
+        <img src="Countdown/Countdown/Homecoming stand.JPG">
+        <img src="Countdown/Countdown/teresa.jpg">
+        <img src="Countdown/Countdown/miyriandklay.jpg">
+        <img src="Countdown/Countdown/harlequin.png">
+        <img src="Countdown/Countdown/needorwant.png">
+        <img src="Countdown/Countdown/omar.png">
+        <img src="Countdown/Countdown/jpgs/sky6.png">
+        <img src="Countdown/Countdown/polaroids.png">
+        <img src="Countdown/Countdown/8bit200.jpg">
+        <img src="Countdown/Countdown/basement full.GIF">
+        <img src="Countdown/Countdown/amiyahandklay.jpg">
+        <img src="Countdown/Countdown/angercontrol.JPG">
+        <img src="Countdown/Countdown/huh.JPG">
+        <img src="Countdown/Countdown/isledeklaymorr.JPG">
+        <img src="Countdown/Countdown/kermit.JPG">
+        <img src="Countdown/Countdown/kinsey3.png">
+        <img src="Countdown/Countdown/light.PNG">
+        <img src="Countdown/Countdown/smilemorr.PNG">
+        <img src="Countdown/Countdown/Sticker.PNG">
+        <img src="Countdown/Countdown/handstand.png">
+        <img src="Countdown/Countdown/eyedraw.png">
+        <img src="Countdown/Countdown/youth.JPG">
+        <img src="Countdown/Countdown/Aphro.GIF">
+        <img src="Countdown/Countdown/sleeper.JPG">
+        <img src="Countdown/Countdown/Razzoos1.JPG">
+        <img src="Countdown/Countdown/Room200.JPG">
+        <img src="Countdown/Countdown/room200flix1.jpg">
+        <img src="Countdown/Countdown/KHAN.GIF">
+        <img src="Countdown/Countdown/room200flix2.jpg">
+        <img src="Countdown/Countdown/ponder.jpg">
+        <img src="Countdown/Countdown/melon.jpg">
+        <img src="Countdown/Countdown/klaydrawing.jpg">
+        <img src="Countdown/Countdown/jamere.jpg">
+        <img src="Countdown/Countdown/greenfn.jpg">
+        <img src="Countdown/Countdown/hangouttwo.JPG">
+        <img src="Countdown/Countdown/davoxandklay.jpg">
+        <img src="Countdown/Countdown/lasertag.jpg">
+        <img src="Countdown/Countdown/volleyballnet.JPG">
+        <img src="Countdown/Countdown/125.png">
+        <img src="Countdown/Countdown/arcfit.png">
+        <img src="Countdown/Countdown/coding.png">
+        <img src="Countdown/Countdown/donnell.png">
+        <img src="Countdown/Countdown/fall.png">
+        <img src="Countdown/Countdown/empireants.png">
+        <img src="Countdown/Countdown/THE STEAM MAN 2.JPG">
+        <img src="Countdown/Countdown/Dawg.JPG">
+        <img src="Countdown/Countdown/triopic.JPG">
+        <img src="Countdown/Countdown/youth.JPG">
+        <img src="Countdown/Countdown/hillside.png">
+        <img src="Countdown/Countdown/frog.png">
+        <img src="Countdown/Countdown/hillsideselfies.png">
+        <img src="Countdown/Countdown/mrE.png">
+        <img src="Countdown/Countdown/mrmckelvey.png">
+        <img src="Countdown/Countdown/night.png">
+        <img src="Countdown/Countdown/outside.png">
+        <img src="Countdown/Countdown/overgrown.png">
+        <img src="Countdown/Countdown/paradise.png">
+        <img src="Countdown/Countdown/shadows.png">
+        <img src="Countdown/Countdown/sushi.png">
+        <img src="Countdown/Countdown/Todd.png">
+        <img src="Countdown/Countdown/yearbook.png">
+        <img src="Countdown/Countdown/Broadway.jpg">
+        <img src="Countdown/Countdown/kinseyandklay.JPG">
+        <img src="Countdown/Countdown/kinseyandklay2.JPG">
+        <img src="Countdown/Countdown/kinseyandklay3.JPG">
+        <img src="Countdown/Countdown/kinseyandklay4.JPG">
+        <img src="Countdown/Countdown/Malbrew.png">
+        <img src="Countdown/Countdown/Monkey.JPG">
+        <img src="Countdown/Countdown/tessaopium.JPG">
+    </div>
+
+  <script>
+    // Set the date to countdown to (e.g., July 4, 2025)
+    const targetDate = new Date("May 30, 2025 00:00:00").getTime();
+
+    // Update the countdown every second
+    const countdown = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      // Calculate time components
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result
+      document.getElementById("countdown").innerHTML = 
+        days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+
+      // When countdown is over
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "Here Rests KLAYMORR";
+      }
+    }, 1000);
+
+    // Scroll stuff
+
+    function revealOnScroll() {
+    const images = document.querySelectorAll('.gallery img');
+    const windowHeight = window.innerHeight;
+
+    images.forEach(img => {
+      const rect = img.getBoundingClientRect();
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        img.classList.add('in-view');
+      } else {
+        img.classList.remove('in-view');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>

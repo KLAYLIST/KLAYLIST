@@ -3,27 +3,27 @@ console.log("script.js has loaded!");
 // Array of featured albums
 const albums = [
     {
-      image: "../KLAYLIST/covers/CHROMAKOPIA.png",
-      title: "CHROMAKOPIA",
-      description: "Tyler, The Creator",
-      link: "#album1"
+      image: "../KLAYLIST/covers/MacMiller/Balloonerism.jpg",
+      title: "Balloonerism",
+      description: "Mac Miller",
+      link: "reviews-albums/Balloonerism.html"
     },
     {
-      image: "../KLAYLIST/covers/GNX.png",
-      title: "GNX",
-      description: "Kendrick Lamar",
-      link: "#album2"
+      image: "../KLAYLIST/covers/PND/SSSFU.jpg",
+      title: "$ome $exy $ongs 4 U",
+      description: "PARTYNEXTDOOR & Drake",
+      link: "reviews-albums/$ome $exy $ongs 4 U.html"
     },
     {
-      image: "../KLAYLIST/covers/i lay my life down for you.png",
-      title: "I LAY MY LIFE DOWN FOR YOU",
-      description: "JPEGMAFIA",
-      link: "#album3"
+      image: "../KLAYLIST/covers/TheWeeknd/Hurry Up Tomorrow.jpg",
+      title: "Hurry Up Tomorrow",
+      description: "The Weeknd",
+      link: "reviews-albums/Hurry Up Tomorrow.html"
     },
     {
-        image: "../KLAYLIST/covers/BLUE LIPS.png",
-        title: "BLUE LIPS",
-        description: "ScHoolboy Q",
+        image: "../KLAYLIST/covers/FKATwigs/Eusexua.jpg",
+        title: "EUSEXUA",
+        description: "FKA Twigs",
         link: "#album4"
     },
     {
@@ -154,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //   });
 // }
 
+
 // Dropdown
 
 document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
@@ -198,7 +199,6 @@ function randomText() {
 
 // Run the function when the page loads
 window.onload = randomText;
-
 
 // Dynamic Age 
 
@@ -664,4 +664,3 @@ function randomAlbum() {
 
 // Run the function when the page loads
 button.onclick = randomAlbum;
-

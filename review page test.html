@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KLAYLIST</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
   </style>
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">KLAYLIST</a></div>
+    <div class="logo"><a href="../index.html">KLAYLIST</a></div>
     <nav>
       <button id="hamburger" class="hamburger">&#9776;</button>
       <ul id="nav-items" class="nav-items">
-        <li><a href="#home">Home</a></li>
+        <li><a href="index.html">Home</a></li>
           <li class="dropdown">
             <a href="#genres" class="dropdown-toggle">Content</a>
             <ul class="dropdown-menu">
               <li><a class="active" href="album-reviews.html">Album Reviews</a></li>
-              <li><a href="article.html">Articles</a></li>
-              <li><a href="#jazz">Matchups</a></li>
+               <!-- <li><a href="article.html">Articles</a></li>
+              <li><a href="#jazz">Matchups</a></li> -->
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
@@ -31,13 +31,13 @@
   </header>
 
       <div class="back-button">
-        <a href="album-reviews.html"><h4>Back</h4></a>
+        <a href="../album-reviews.html"><h4>Back</h4></a>
       </div>
 
         <section id="back-square">
           <div class="review-blk-structure">
               <div class="review-cover">
-                <img src="ph.png" width="200px">
+                <img src="../ph.png" width="200px">
               </div>
 
               <div class="review-details">
@@ -51,11 +51,6 @@
 
               
             </div>
-            <div class="review-num1">
-              <div class="review-num2">
-                <h1 style="text-align: center;">--/10</h1>
-              </div>
-          </div>
 
             <br>
             <hr>
@@ -67,26 +62,55 @@
               <p style="color: var(--text-color)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
               </p>
+
+              <br><hr><br>
+
               <h3>Production & Sound</h3>
               <p style="color: var(--text-color)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
               </p>
+
+              <br><hr><br>
+
               <h3>Lyrical Content</h3>
               <p style="color: var(--text-color)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
               </p>
+
+              <br><hr><br>
+
               <h3>Flow & Cohesion</h3>
               <p style="color: var(--text-color)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
               </p>
+
+              <br><hr><br>
+
               <h3>Standout Tracks</h3>
               <p style="color: var(--text-color)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
               </p>
+
+              <br><hr><br>
+
+              <h3>Cover Art</h3>
+              <p style="color: var(--text-color)">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
+              </p>
+
+              <br><hr><br>
+
               <h3>Final Thoughts</h3>
               <p style="color: var(--text-color)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis praesentium nemo perferendis minus vel mollitia provident iure ipsam quas sequi minima eligendi inventore animi pariatur, culpa necessitatibus facere est.
               </p>
+              
+            </div>
+
+            <div class="review-num1">
+              <div class="review-num2">
+                <center><h1>--/10</h1></center>
+              </div>
             </div>
 
             <br>
@@ -204,15 +228,15 @@
           <div class="links-content">
   
             <div class="links-entry">
-              <a href="#"><img src="assets/spotify.svg" width="30px"></a>
+              <a href="#" target=“_blank”><img src="../assets/spotify.svg" width="30px"></a>
             </div>
   
             <div class="links-entry">
-              <a href="#"><img src="assets/apple music.svg" width="30px"></a>
+              <a href="#" target=“_blank”><img src="../assets/apple music.svg" width="30px"></a>
             </div>
   
             <div class="links-entry">
-              <a href="#"><img src="assets/soundcloud.svg" width="30px"></a>
+              <a href="#" target=“_blank”><img src="../assets/soundcloud.svg" width="30px"></a>
             </div>
   
           </div>
@@ -239,7 +263,7 @@
           <p>Follow me on <a href="https://www.instagram.com/itsjust_klaymorr/?locale=gb&hl=am-et">Instagram</a></p>
         </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
