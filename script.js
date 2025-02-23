@@ -34,12 +34,12 @@ const albums = [
     },
   ];
   
-  // Function to display a random album
+  // Display a random album
   function displayRandomAlbum() {
     const randomIndex = Math.floor(Math.random() * albums.length);
     const selectedAlbum = albums[randomIndex];
   
-    // Update the DOM elements with the selected album's details
+    // Update the DOM
     document.getElementById("featured-image").src = selectedAlbum.image;
     document.getElementById("featured-image").alt = selectedAlbum.title;
     document.getElementById("featured-title").textContent = selectedAlbum.title;
@@ -47,25 +47,25 @@ const albums = [
     document.getElementById("featured-link").href = selectedAlbum.link;
   }
   
-  // Call the function when the page loads
+  // Page load stuff
   document.addEventListener("DOMContentLoaded", displayRandomAlbum);
 
-// Select the theme toggle button
+// Theme selector
 const themeToggle = document.getElementById("theme-toggle");
 
-// Check and apply the user's saved theme preference from localStorage
+// Saved???
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   document.body.classList.add(savedTheme);
   themeToggle.textContent = savedTheme === "dark-mode" ? "Light Mode" : "Dark Mode";
 }
 
-// Add event listener to toggle theme
+// The listener for the theme toggle stuff
 themeToggle.addEventListener("click", () => {
   const isDarkMode = document.body.classList.toggle("dark-mode");
   themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
 
-  // Save the user's preference to localStorage
+  // SAVE!!!
   localStorage.setItem("theme", isDarkMode ? "dark-mode" : "");
 });
 
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navItems = document.getElementById("nav-items");
 
-  // Turn the menu on/Off :P
+  // Turn the menu on/off :P
   hamburger.addEventListener("click", () => {
     navItems.classList.toggle("show");
   });
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // const stars = document.querySelectorAll('.star-rating span');
 // const result = document.getElementById('rating-result');
 
-// // Load saved rating from localStorage if available
 // document.addEventListener('DOMContentLoaded', () => {
 //   const savedRating = localStorage.getItem('userRating');
 //   if (savedRating) {
@@ -117,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 // stars.forEach(star => {
-//   // Click event
 //   star.addEventListener('click', () => {
 //     const rating = star.getAttribute('data-value');
 //     updateStars(rating);
@@ -127,20 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
 //     localStorage.setItem('userRating', rating);
 //   });
 
-//   // Keyboard navigation
 //   star.addEventListener('keydown', (e) => {
 //     if (e.key === 'Enter' || e.key === ' ') { // Space or Enter to select
 //       const rating = star.getAttribute('data-value');
 //       updateStars(rating);
 //       result.textContent = `Rating: ${rating}`;
 
-//       // Save the rating in localStorage
 //       localStorage.setItem('userRating', rating);
 //     }
 //   });
 // });
 
-// // Helper function to update stars visually and for accessibility
 // function updateStars(rating) {
 //   stars.forEach(star => {
 //     const value = star.getAttribute('data-value');
@@ -165,7 +160,6 @@ document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
   });
 });
 
-// Close dropdown when clicking outside
 document.addEventListener('click', (e) => {
   if (!e.target.closest('.dropdown')) {
     document.querySelectorAll('.dropdown-menu').forEach((menu) => {
@@ -190,44 +184,41 @@ function randomText() {
         "Are you the chum with dry skin?",
     ];
     
-    // Get a random index from the array
     const randomIndex = Math.floor(Math.random() * texts.length);
     
-    // Insert random text into the element
     document.getElementById("randomText").innerText = texts[randomIndex];
 }
 
-// Run the function when the page loads
 window.onload = randomText;
 
-// Dynamic Age 
+// // Dynamic Age 
 
-function calculateAge(birthDate) {
-  const today = new Date();
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const hasBirthdayPassed = 
-      today.getMonth() > birthDate.getMonth() || 
-      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+// function calculateAge(birthDate) {
+//   const today = new Date();
+//   let age = today.getFullYear() - birthDate.getFullYear();
+//   const hasBirthdayPassed = 
+//       today.getMonth() > birthDate.getMonth() || 
+//       (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
   
-  if (!hasBirthdayPassed) {
-      age--; // Subtract 1 if the birthday hasn't passed this year
-  }
-  return age;
-}
+//   if (!hasBirthdayPassed) {
+//       age--; 
+//   }
+//   return age;
+// }
 
-function updateAge() {
-  const birthDate = new Date("2000-05-15"); // Replace with your birth date
-  const ageElement = document.getElementById("age");
-  ageElement.textContent = calculateAge(birthDate);
-}
+// function updateAge() {
+//   const birthDate = new Date("2000-05-15"); // Replace with your birth date
+//   const ageElement = document.getElementById("age");
+//   ageElement.textContent = calculateAge(birthDate);
+// }
 
-updateAge();
+// updateAge();
 
 // Album Sorter
 
 document.getElementById("sortButton").addEventListener("click", function () {
   let container = document.getElementById("albumContainer");
-  let albums = Array.from(container.getElementsByClassName("grid-review-card")); // Corrected selection
+  let albums = Array.from(container.getElementsByClassName("grid-review-card")); 
 
   albums.sort((a, b) => {
       let titleA = a.querySelector("h3").textContent.trim().toLowerCase();
@@ -235,18 +226,17 @@ document.getElementById("sortButton").addEventListener("click", function () {
       return titleA.localeCompare(titleB);
   });
 
-  albums.forEach(album => container.appendChild(album)); // Append in sorted order
+  albums.forEach(album => container.appendChild(album)); 
 
-  console.log("Sorting complete"); // Debugging line
+  console.log("Sorting complete");
 });
 
 // Music Box JS
 
-// Run the function when the page loads
 window.onload = randomText;
 
 function randomAlbum() {
-    // Array of text options
+    // ALLLL THESE ALBUMS
     const albums = [
         "Nas – Illmatic (1994)",
         "The Notorious B.I.G. – Ready to Die (1994)",
@@ -655,12 +645,10 @@ function randomAlbum() {
         "Tomita – Kosmos (1979)",
     ];
     
-    // Get a random index from the array
+    // Random index from that very very long list of albums
     const randomIndex = Math.floor(Math.random() * albums.length);
     
-    // Insert random text into the element
     document.getElementById("randomAlbum").innerText = albums[randomIndex];
 }
 
-// Run the function when the page loads
 button.onclick = randomAlbum;

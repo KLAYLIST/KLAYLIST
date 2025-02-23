@@ -7,7 +7,7 @@ const albumsData = [
     { name: "CHROMAKOPIA", artist: "Tyler, The Creator", genre: "Hip-Hop", image: "../KLAYLIST/covers/CHROMAKOPIA.png", link: "reviews-albums/CHROMAKOPIA.html" },
     { name: "EUSEXUA", artist: "FKA Twigs", genre: "Electronic", image: "../KLAYLIST/covers/FKATwigs/Eusexua.jpg", link: "#" },
     { name: "The Breeze Grew a Fire", artist: "Mereba", genre: "R&B", image: "../KLAYLIST/covers/Mereba/The Breeze Grew a Fire.jpg", link: "#" },
-    { name: "GNX", artist: "Mereba", genre: "Hip-Hop", image: "../KLAYLIST/covers/GNX.png", link: "#" },
+    { name: "GNX", artist: "Kendrick Lamar", genre: "Hip-Hop", image: "../KLAYLIST/covers/GNX.png", link: "#" },
     { name: "I LAY MY LIFE DOWN FOR YOU", artist: "JPEGMAFIA", genre: "Hip-Hop", image: "../KLAYLIST/covers/i lay my life down for you.png", link: "#" },
     { name: "I LAY MY LIFE DOWN FOR YOU (DC)", artist: "JPEGMAFIA", genre: "Hip-Hop", image: "../KLAYLIST/covers/JPEGMAFIA/ILDMLFYDC.jpg", link: "#" },
     { name: "BLUE LIPS", artist: "ScHoolboy Q", genre: "Hip-Hop", image: "../KLAYLIST/covers/BLUE LIPS.png", link: "#" },
