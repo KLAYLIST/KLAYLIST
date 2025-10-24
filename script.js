@@ -1,5 +1,11 @@
 console.log("script.js has loaded!");
 
+document.querySelectorAll('.card-box-item').forEach(card => {
+card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+});
+});
+
 // Array of featured albums
 const albums = [
     {
@@ -27,11 +33,24 @@ const albums = [
         link: "#album4"
     },
     {
-        image: "../KLAYLIST/covers/Dark Times.png",
-        title: "Dark Times",
-        description: "Vince Staples",
+        image: "../KLAYLIST/covers/KaliUchis/Sincerely.jpg",
+        title: "Sincerely,",
+        description: "Kali Uchis",
         link: "#album5"
     },
+    {
+        image: "../KLAYLIST/covers/JID/GDLU.jpeg",
+        title: "God Does Like Ugly",
+        description: "JID",
+        link: "#album6"
+    },
+    {
+        image: "../KLAYLIST/covers/Clipse/LGSEO.jpeg",
+        title: "Let Got Sort Em Out",
+        description: "Clipse",
+        link: "#album7"
+    },
+    
   ];
   
   // Display a random album
