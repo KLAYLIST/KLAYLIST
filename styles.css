@@ -1421,7 +1421,7 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     /* border: red solid 2px; */
     text-align: center;
   }
@@ -2760,7 +2760,7 @@ footer {
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: 431px) {
   .review-blk-structure {
     flex-direction: column;
   }
