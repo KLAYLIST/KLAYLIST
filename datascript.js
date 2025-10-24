@@ -1,17 +1,19 @@
 // Search Bar
 
 const albumsData = [
-    { name: "Balloonerism", artist: "Mac Miller", genre: "Hip-Hop", image: "../KLAYLIST/covers/MacMiller/Balloonerism.jpg", link: "reviews-albums/CHROMAKOPIA.html" },
+    { name: "Balloonerism", artist: "Mac Miller", genre: "Hip-Hop", image: "../KLAYLIST/covers/MacMiller/Balloonerism.jpg", link: "reviews-albums/Balloonerism.html" },
     { name: "$ome $exy $ongs 4 U", artist: "Drake & PARTYNEXTDOOR", genre: "R&B", image: "../KLAYLIST/covers/PND/SSSFU.jpg", link: "reviews-albums/$ome $exy $ongs 4 U.html" },
     { name: "Hurry Up Tomorrow", artist: "The Weeknd", genre: "R&B", image: "../KLAYLIST/covers/TheWeeknd/Hurry Up Tomorrow.jpg", link: "reviews-albums/Hurry Up Tomorrow.html" },
     { name: "CHROMAKOPIA", artist: "Tyler, The Creator", genre: "Hip-Hop", image: "../KLAYLIST/covers/CHROMAKOPIA.png", link: "reviews-albums/CHROMAKOPIA.html" },
     { name: "EUSEXUA", artist: "FKA Twigs", genre: "Electronic", image: "../KLAYLIST/covers/FKATwigs/Eusexua.jpg", link: "#" },
     { name: "The Breeze Grew a Fire", artist: "Mereba", genre: "R&B", image: "../KLAYLIST/covers/Mereba/The Breeze Grew a Fire.jpg", link: "#" },
     { name: "GNX", artist: "Kendrick Lamar", genre: "Hip-Hop", image: "../KLAYLIST/covers/GNX.png", link: "#" },
-    { name: "I LAY MY LIFE DOWN FOR YOU", artist: "JPEGMAFIA", genre: "Hip-Hop", image: "../KLAYLIST/covers/i lay my life down for you.png", link: "#" },
-    { name: "I LAY MY LIFE DOWN FOR YOU (DC)", artist: "JPEGMAFIA", genre: "Hip-Hop", image: "../KLAYLIST/covers/JPEGMAFIA/ILDMLFYDC.jpg", link: "#" },
+    { name: "I LAY DOWN MY LIFE FOR YOU", artist: "JPEGMAFIA", genre: "Hip-Hop", image: "../KLAYLIST/covers/i lay my life down for you.png", link: "#" },
+    { name: "I LAY DOWN MY LIFE FOR YOU (DC)", artist: "JPEGMAFIA", genre: "Hip-Hop", image: "../KLAYLIST/covers/JPEGMAFIA/ILDMLFYDC.jpg", link: "#" },
     { name: "BLUE LIPS", artist: "ScHoolboy Q", genre: "Hip-Hop", image: "../KLAYLIST/covers/BLUE LIPS.png", link: "#" },
     { name: "Dark Times", artist: "Vince Staples", genre: "Hip-Hop", image: "../KLAYLIST/covers/Dark Times.png", link: "#" },
+    { name: "One Of A Kind", artist: "G-DRAGON", genre: "K-Pop", image: "../KLAYLIST/covers/G-Dragon/One Of A Kind.jpg", link: "#" },
+    { name: "Sincerely,", artist: "Kali Uchis", genre: "R&B", image: "../KLAYLIST/covers/KaliUchis/Sincerely.jpg", link: "#" },
   ];
   
 const searchInput = document.getElementById("search");
