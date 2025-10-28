@@ -40,6 +40,7 @@
     --w2g: white;
     --b2g: rgb(205, 205, 205);
     --b2gr: black;
+    --lb2w: white;
   }
   
   /* Dark Mode Variables */
@@ -76,6 +77,7 @@
     --w2g: #064906;
     --b2g: black;
     --b2gr: #064906;
+    --lb2w: rgb(35, 35, 35);
   } 
 
   html, body {
@@ -1804,7 +1806,7 @@ input {
   }
 
   .yap-card {
-    background-color: var(--bg-color);
+    background-color: var(--lb2w);
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
@@ -1897,7 +1899,7 @@ input {
 #y-header {
   font-family: "Orienta", sans-serif;
   width: 50%;
-  color: var(--b2gr);
+  color: var(--link-color);
 }
 
 .popup {
