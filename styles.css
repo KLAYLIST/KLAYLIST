@@ -1533,7 +1533,7 @@ input {
   } */
   
   .front-card {
-    background-image: url("assets/me.jpg");
+    background-image: url("../KLAYLIST/assets/me.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
