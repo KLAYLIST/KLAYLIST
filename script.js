@@ -247,7 +247,7 @@ document.getElementById("sortButton").addEventListener("click", function () {
 
   albums.forEach(album => container.appendChild(album)); 
 
-  console.log("Sorting complete");
+  // console.log("Sorting complete");
 });
 
 // Music Box JS
@@ -671,3 +671,5 @@ function randomAlbum() {
 }
 
 button.onclick = randomAlbum;
+
+// Yap Page

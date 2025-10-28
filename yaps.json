@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Artist Highlight",
+    "emoji": "🎧",
+    "size": "large",
+    "category": "music",
+    "image": "images/steve-lacy.jpg",
+    "content": "Steve Lacy’s blend of R&B and indie tones proves that bedroom music can hit stadium levels."
+  },
+  {
+    "title": "Song Note",
+    "emoji": "📝",
+    "size": "medium",
+    "category": "reflection",
+    "image": "images/sza-gooddays.jpg",
+    "content": "‘Good Days’ by SZA feels like a daydream caught between anxiety and healing — soft but still sharp."
+  },
+  {
+    "title": "Random Thought",
+    "emoji": "💭",
+    "size": "small",
+    "category": "thought",
+    "image": "images/nostalgia.jpg",
+    "content": "Rediscovering an old song feels like meeting your younger self and realizing you’ve both changed, but the feeling still hits."
+  }
+]

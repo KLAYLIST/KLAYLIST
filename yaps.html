@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLAY'S LIST</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="Klaylist.PNG">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">KLAY'S LIST</a></div>
+    <nav>
+      <button id="hamburger" class="hamburger">&#9776;</button>
+      <ul id="nav-items" class="nav-items">
+        <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#genres" class="dropdown-toggle">Content</a>
+            <ul class="dropdown-menu">
+              <li><a class="active" href="album-reviews.html">Album Reviews</a></li>
+               <li><a href="article.html">Articles</a></li>
+                            <li><a href="yaps.html">Yapping</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+      </ul>      
+    </nav>
+  </header>
+<body>
+<header>
+<div class="y-heading">
+  <h1 id="y-header">Yap Magazine</h1>
+  <input type="text" id="searchBar" placeholder="Search for artists, songs, or thoughts...">
+</div>
+</header>
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="artist">Artists</button>
+    <button class="filter-btn" data-category="yap">Yaps</button>
+    <button class="filter-btn" data-category="albums">Albums</button>
+    <button class="filter-btn" data-category="quiz">Quiz</button>
+  </div>
+
+<div class="yap-grid" id="yapGrid"></div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="closePopup">&times;</span>
+    <img id="popupImage" src="" alt="">
+    <h2 id="popupTitle"></h2>
+    <p id="popupText"></p>
+  </div>
+</div>
+
+<footer>
+  <!-- <p>©<span id="year"></span> KLAYLIST</p> -->
+  <p>Follow me on <a href="https://www.instagram.com/klays_musikyap/?locale=gb&hl=am-et">Instagram</a></p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+// Yap data
+const yaps = [
+  {
+    title: "Artist Highlight: Xella Red",
+    image: "../KLAYLIST/artists/XellaRed.png",
+    snippet: "Xella Red deserves her flowers!!!",
+    text: "Xella Red has been putting it on for the underground Chicago rap scene especially this year. With consistent releases, crazy live performances, and an amazing discograpghy of bangers, she definitely deserves more attention.",
+    size: "tall",
+    category: "artist",
+        button: {
+        text: "Follow Her Social",
+        url: "https://www.instagram.com/xellared/?hl=en"
+    },
+  },
+  {
+    title: "First Impression: AMERIKA’S NEXT TOP PARTY!",
+    image: "../KLAYLIST/covers/PartyOf2/ANTP.jpg",
+    snippet: "This one was ummm...",
+    text: "After the first listen, I gotta be honest... this one isn't hitting for me. I like the concept and the idea but some songs seem to just fall flat and miss the mark. Maybe it's not for me I guess.",
+    size: "large",
+    category: "albums"
+  },
+  {
+    title: "CHROMAKOPIA One Year Anniversary",
+    image: "../KLAYLIST/covers/CHROMAKOPIA.png",
+    snippet: "It's already been a year and this album is STILL in rotation!",
+    text: "One year ago, Tyler, The Creator released yet another amazing project. This is easily one of my favorite Tyler albums. Check out the review when you get the chance.",
+    size: "large",
+    button: {
+        text: "Read Full Article",
+        url: "../KLAYLIST/reviews-albums/article-temp.html"
+    },
+        category: "albums"
+  },
+  {
+    title: "Don't Sleep: Glutton For Punishment",
+    image: "../KLAYLIST/covers/Heartworms/GFP.jpg",
+    snippet: "I just recently found out about this artist.",
+    text: "This is easily one of my favorite albums this year. The creative, grungy, and dark atmospheric style is just too good to pass on",
+    size: "large",
+    button: {
+        text: "Look Into It",
+        url: "https://www.google.com/search?q=heartworms+glutton+for+punishment+&sca_esv=3aa6d84c464b4bf8&cs=1&biw=1536&bih=730&sxsrf=AE3TifPKv5zWR5TQakE5xDkLSUXPpBDeRw%3A1761610328541&ei=WAoAaYnhILq4mtkPocul2Qo&ved=0ahUKEwiJ7fXuzcWQAxU6nCYFHaFlKasQ4dUDCBE&uact=5&oq=heartworms+glutton+for+punishment+&gs_lp=Egxnd3Mtd2l6LXNlcnAiImhlYXJ0d29ybXMgZ2x1dHRvbiBmb3IgcHVuaXNobWVudCAyBBAjGCcyChAjGPAFGCcYyQIyChAAGIAEGEMYigUyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHkjZB1CEBliEBnACeAGQAQCYAWOgAWOqAQExuAEDyAEA-AEBmAIDoAJuwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHAzIuMaAH6QmyBwMwLjG4B2fCBwUwLjEuMsgHCA&sclient=gws-wiz-serp"
+    },
+    category: "albums"
+  },
+  {
+    title: "This Album Is Really Weird And I Love It!",
+    image: "../KLAYLIST/covers/MonteBooker/noise.jpg",
+    snippet: "Honestly, this is such a great listen",
+    text: "Monte Booker really did his thing with this one. This album has me catching a strange vibe but in the best way possible.",
+    size: "large",
+    category: "yap"
+  },
+  {
+    title: "Steve Lacy Update",
+    image: "../KLAYLIST/artists/SteveLacy.png",
+    snippet: "The question is, have I started listening to his music yet?",
+    text: "Answer: No.",
+    size: "large",
+    category: "yap"
+  },
+  {
+    title: "QUIZ:",
+    image: "../KLAYLIST/artists/Tyler.jpg",
+    snippet: "What is my project from favorite Tyler, The Creator?",
+    text: "Answer: Flower Boy",
+    size: "large",
+    category: "quiz"
+  },
+//   {
+//     title: "Mini Yap: Indie Sound Revival",
+//     snippet: "The indie scene feels alive again — but reimagined.",
+//     text: "While 2010s indie had its golden era, new artists are evolving it with bedroom pop warmth and post-punk grit. The sound is nostalgic, but the attitude is forward-looking."
+//   },
+  
+];
+
+// Generate Yap cards dynamically
+const grid = document.getElementById('yapGrid');
+function renderYaps(filteredYaps) {
+  grid.innerHTML = "";
+  filteredYaps.forEach(yap => {
+    const card = document.createElement('div');
+    const sizes = ["small", "medium", "large"];
+    card.classList.add('yap-card', yap.size || "medium");
+    card.innerHTML = `
+      ${yap.image ? `<img src="${yap.image}" alt="${yap.title}">` : ""}
+      <div class="yap-card-content">
+        <h2>${yap.title}</h2>
+        <p>${yap.snippet}</p>
+      </div>
+    `;
+    card.addEventListener('click', () => openPopup(yap));
+    grid.appendChild(card);
+  });
+}
+renderYaps(yaps);
+
+// Popup functionality
+const popup = document.getElementById('popup');
+const popupImage = document.getElementById('popupImage');
+const popupTitle = document.getElementById('popupTitle');
+const popupText = document.getElementById('popupText');
+const closePopupBtn = document.getElementById('closePopup');
+
+function openPopup(yap) {
+  popupImage.src = yap.image || "";
+  popupTitle.textContent = yap.title;
+  popupText.textContent = yap.text;
+
+  // Remove any existing button
+  const existingButton = document.getElementById("popupButton");
+  if (existingButton) existingButton.remove();
+
+  // Add new button if it exists
+  if (yap.button) {
+    const btn = document.createElement("a");
+    btn.id = "popupButton";
+    btn.href = yap.button.url;
+    btn.textContent = yap.button.text;
+    btn.className = "popup-btn";
+    document.querySelector(".popup-content").appendChild(btn);
+  }
+
+  popup.style.display = "flex";
+}
+
+closePopupBtn.addEventListener('click', () => popup.style.display = 'none');
+window.addEventListener('click', (e) => {
+  if (e.target === popup) popup.style.display = 'none';
+});
+
+// Category filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCategory = btn.dataset.category;
+    renderYaps();
+  });
+});
+
+// Search filter
+const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('input', e => {
+  const query = e.target.value.toLowerCase();
+  const filtered = yaps.filter(yap =>
+    yap.title.toLowerCase().includes(query) ||
+    yap.snippet.toLowerCase().includes(query)
+  );
+  renderYaps(filtered);
+});
+</script>
+
+</body>
+</html>
