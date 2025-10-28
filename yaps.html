@@ -33,7 +33,7 @@
 <body>
 <header>
 <div class="y-heading">
-  <h1 id="y-header">Yap Magazine</h1>
+  <h1 id="y-header">YAP MAGAZINE</h1>
   <input type="text" id="searchBar" placeholder="Search for artists, songs, or thoughts...">
 </div>
 </header>
@@ -97,7 +97,7 @@ const yaps = [
     text: "One year ago, Tyler, The Creator released yet another amazing project. This is easily one of my favorite Tyler albums. Check out the review when you get the chance.",
     size: "large",
     button: {
-        text: "Read Full Article",
+        text: "Read Full Review",
         url: "../KLAYLIST/reviews-albums/article-temp.html"
     },
         category: "albums"
@@ -138,12 +138,6 @@ const yaps = [
     size: "large",
     category: "quiz"
   },
-//   {
-//     title: "Mini Yap: Indie Sound Revival",
-//     snippet: "The indie scene feels alive again — but reimagined.",
-//     text: "While 2010s indie had its golden era, new artists are evolving it with bedroom pop warmth and post-punk grit. The sound is nostalgic, but the attitude is forward-looking."
-//   },
-  
 ];
 
 // Generate Yap cards dynamically
@@ -206,8 +200,14 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentCategory = btn.dataset.category;
-    renderYaps();
+
+    const category = btn.dataset.category;
+    if (category === "all") {
+      renderYaps(yaps);
+    } else {
+      const filtered = yaps.filter(yap => yap.category === category);
+      renderYaps(filtered);
+    }
   });
 });
 
