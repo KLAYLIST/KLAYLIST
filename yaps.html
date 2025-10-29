@@ -17,14 +17,9 @@
       <button id="hamburger" class="hamburger">&#9776;</button>
       <ul id="nav-items" class="nav-items">
         <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#genres" class="dropdown-toggle">Content</a>
-            <ul class="dropdown-menu">
-              <li><a class="active" href="album-reviews.html">Album Reviews</a></li>
-               <li><a href="article.html">Articles</a></li>
-                            <li><a href="yaps.html">Yapping</a></li>
-            </ul>
-          </li>
+        <li><a href="album-reviews.html">Album Reviews</a></li>
+        <li><a href="article.html">Articles</a></li>
+        <li><a href="yaps.html">Yapping</a></li>
           <li><a href="about.html">About</a></li>
           <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
       </ul>      
@@ -120,7 +115,7 @@ const yaps = [
     snippet: "Honestly, this is such a great listen",
     text: "Monte Booker really did his thing with this one. This album has me catching a strange vibe but in the best way possible.",
     size: "large",
-    category: "yap"
+    category: "albums"
   },
   {
     title: "Steve Lacy Update",
@@ -138,6 +133,14 @@ const yaps = [
     size: "large",
     category: "quiz"
   },
+  {
+    title: "Why Do People Hate This Song So Much???",
+    image: "../KLAYLIST/artists/JCole.png",
+    snippet: "I'm never gonna let this go...",
+    text: "I'll say this again. 'Foldin Clothes' is. a. GOOD. SONG! I don't understand why this is highly regarded as a bad J. Cole song. The vibes are great and the poetic stretch in the end is amazing!",
+    size: "large",
+    category: "yap"
+  },
 ];
 
 // Generate Yap cards dynamically
@@ -146,7 +149,7 @@ function renderYaps(filteredYaps) {
   grid.innerHTML = "";
   filteredYaps.forEach(yap => {
     const card = document.createElement('div');
-    const sizes = ["small", "medium", "large"];
+    const sizes = ["small", "medium", "large", "tall", "wide"];
     card.classList.add('yap-card', yap.size || "medium");
     card.innerHTML = `
       ${yap.image ? `<img src="${yap.image}" alt="${yap.title}">` : ""}
