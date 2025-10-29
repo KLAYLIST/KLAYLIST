@@ -115,7 +115,8 @@ const yaps = [
     snippet: "Honestly, this is such a great listen",
     text: "Monte Booker really did his thing with this one. This album has me catching a strange vibe but in the best way possible.",
     size: "large",
-    category: "albums"
+    category: "yap",
+    spotifyUrl: "https://open.spotify.com/embed/track/0t9WTd6vD1mTpaSB0dqiB4?utm_source=generator&theme=0"
   },
   {
     title: "Steve Lacy Update",
@@ -139,7 +140,17 @@ const yaps = [
     snippet: "I'm never gonna let this go...",
     text: "I'll say this again. 'Foldin Clothes' is. a. GOOD. SONG! I don't understand why this is highly regarded as a bad J. Cole song. The vibes are great and the poetic stretch in the end is amazing!",
     size: "large",
-    category: "yap"
+    category: "yap",
+    spotifyUrl: "https://open.spotify.com/embed/track/77IAeEz8LEchPN8UNjaTJ2?utm_source=generator"
+  },
+  {
+    title: "Song On Repeat: 'Dancing Circles 2.0'",
+    image: "../KLAYLIST/artists/Sampha.jpg",
+    snippet: "DANCINGGGGGG!",
+    text: "This song does something to me. Now that the Fall weather has officially begun out here in Texas, it hits even harder. Such a vibe!",
+    size: "large",
+    category: "yap",
+    spotifyUrl: "https://open.spotify.com/embed/track/3C5eqElWp0s4of3vTU37bF?utm_source=generator"
   },
 ];
 
@@ -176,18 +187,33 @@ function openPopup(yap) {
   popupTitle.textContent = yap.title;
   popupText.textContent = yap.text;
 
-  // Remove any existing button
-  const existingButton = document.getElementById("popupButton");
-  if (existingButton) existingButton.remove();
+  const popupContent = document.querySelector(".popup-content");
 
-  // Add new button if it exists
+  // Remove old dynamic elements (buttons and players)
+  popupContent.querySelectorAll("#popupButton, .spotify-embed").forEach(el => el.remove());
+
+  // Add link button if it exists
   if (yap.button) {
     const btn = document.createElement("a");
     btn.id = "popupButton";
     btn.href = yap.button.url;
     btn.textContent = yap.button.text;
     btn.className = "popup-btn";
-    document.querySelector(".popup-content").appendChild(btn);
+    popupContent.appendChild(btn);
+  }
+
+  // Add Spotify embed if available
+  if (yap.spotifyUrl) {
+    const iframe = document.createElement("iframe");
+    iframe.className = "spotify-embed";
+    iframe.src = yap.spotifyUrl;
+    iframe.width = "100%";
+    iframe.height = "152";
+    iframe.style.borderRadius = "12px";
+    iframe.frameBorder = "0";
+    iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+    iframe.loading = "lazy";
+    popupContent.appendChild(iframe);
   }
 
   popup.style.display = "flex";
