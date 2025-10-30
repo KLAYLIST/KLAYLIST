@@ -55,6 +55,9 @@
   </div>
 </div>
 
+<h2 class="y-section-title">YAP EXCLUSIVES</h2>
+<div class="yap-grid exclusive-grid" id="exclusiveYapGrid"></div>
+
 <footer>
   <!-- <p>©<span id="year"></span> KLAYLIST</p> -->
   <p>Follow me on <a href="https://www.instagram.com/klays_musikyap/?locale=gb&hl=am-et">Instagram</a></p>
@@ -250,6 +253,49 @@ searchBar.addEventListener('input', e => {
   );
   renderYaps(filtered);
 });
+</script>
+
+<!-- Exclusive Yaps -->
+
+<script>
+  const exclusiveYaps = [
+    {
+      title: "Exclusive Drop: The New Sound of 2025",
+      image: "../KLAYLIST/covers/BLUE LIPS.png",
+      snippet: "A deep dive into emerging underground artists.",
+      text: "These artists are redefining the genre scene with bold new sounds...",
+      size: "large",
+      category: "exclusive"
+    },
+    {
+      title: "Behind The Mic: Studio Secrets",
+      image: "../KLAYLIST/ph.png",
+      snippet: "An inside look at the recording process.",
+      text: "From mic placement to late-night sessions, here’s how hits are born.",
+      size: "large",
+      category: "exclusive"
+    }
+  ];
+
+  const exclusiveGrid = document.getElementById('exclusiveYapGrid');
+
+  function renderExclusiveYaps(filteredYaps) {
+    exclusiveGrid.innerHTML = "";
+    filteredYaps.forEach(yap => {
+      const card = document.createElement('div');
+      card.classList.add('yap-card', yap.size || "medium");
+      card.innerHTML = `
+        ${yap.image ? `<img src="${yap.image}" alt="${yap.title}">` : ""}
+        <div class="yap-card-content">
+          <h2>${yap.title}</h2>
+          <p>${yap.snippet}</p>
+        </div>
+      `;
+      card.addEventListener('click', () => openPopup(yap));
+      exclusiveGrid.appendChild(card);
+    });
+  }
+  renderExclusiveYaps(exclusiveYaps);
 </script>
 
 </body>
