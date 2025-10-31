@@ -49,7 +49,7 @@
               <p>The Weeknd</p>
           </div></a>
         </div>
-        <div class="mrp-card">
+        <div class="mrp-card" data-deluxe="covers/KaliUchis/SincerelyDeluxe.jpg">
           <div class="background" style="background-image: url(covers/KaliUchis/Sincerely.jpg);"></div>
           <div class="info">
               <h3>Sincerely,</h3>
@@ -99,7 +99,7 @@
           </div>
 
           <div class="item">
-            <div class="mrp-card">
+            <div class="mrp-card"  data-deluxe="covers/KaliUchis/SincerelyDeluxe.jpg">
               <a href="#">
               <div class="background" style="background-image: url(covers/KaliUchis/Sincerely.jpg);"></div>
               <div class="info">
@@ -177,6 +177,32 @@
 
         <div id="albumContainer" class="flex5">
 
+          <div class="grid-review-card" data-title="Deadbeat - Tame Impala" data-genre="electronic">
+            <a href="#"> <img src="../KLAYLIST/covers/TameImpala/Deadbeat.png" alt="Album 1">
+            <h3>Deadbeat</h3>
+            <p>Tame Impala</p></a>
+          </div>
+
+          <div class="grid-review-card" 
+              data-title="CHROMAKOPIA - Tyler, The Creator" 
+              data-genre="hip-hop"
+              data-deluxe="../KLAYLIST/covers/TylerTheCreator/CHROMAKOPIADELUXE.JPG">
+            <a href="../KLAYLIST/reviews-albums/CHROMAKOPIA.html">
+              <img src="covers/CHROMAKOPIA.png" alt="Deadbeat album cover">
+              <h3>CHROMAKOPIA</h3>
+              <p>Tyler, The Creator</p>
+            </a>
+          </div>
+
+          <div class="grid-review-card" 
+              data-title="Sincerely, - Kali Uchis" 
+              data-genre="r&b"
+              data-deluxe="../KLAYLIST/covers/KaliUchis/SincerelyDeluxe.jpg">
+            <a href="#"> <img src="../KLAYLIST/covers/KaliUchis/Sincerely.jpg" alt="Album 1">
+            <h3>Sincerely,</h3>
+            <p>Kali Uchis</p></a>
+          </div>
+
           <div class="grid-review-card" data-title="Sincerely, - Kali Uchis" data-genre="r&b">
             <a href="#"> <img src="ph.png" alt="Album 1">
             <h3>Album Title</h3>
@@ -199,26 +225,31 @@
               const container = document.getElementById("albumContainer");
               const sortButton = document.getElementById("sortButton");
 
-              sortButton.addEventListener("click", function () {
-                  const cards = Array.from(container.getElementsByClassName("grid-review-card"));
+          sortButton.addEventListener("click", function () {
+            const cards = Array.from(container.getElementsByClassName("grid-review-card"));
+            
+            // If we haven't stored the original order yet, save it
+            if (!container.dataset.originalOrder) {
+              container.dataset.originalOrder = JSON.stringify(cards.map(card => card.outerHTML));
+            }
 
-                  // Toggle sorting direction
-                  const ascending = sortButton.dataset.ascending === "true";
-                  sortButton.dataset.ascending = !ascending;
+            // Track current mode
+            const isSorted = sortButton.dataset.sorted === "true";
 
-                  // Sort based on the data-title attribute
-                  cards.sort((a, b) => {
-                      return ascending 
-                          ? b.dataset.title.localeCompare(a.dataset.title)  // Z-A
-                          : a.dataset.title.localeCompare(b.dataset.title); // A-Z
-                  });
-
-                  // Re-append the sorted elements
-                  cards.forEach(card => container.appendChild(card));
-
-                  // Update button text
-                  sortButton.textContent = ascending ? "Sort Z-A" : "Sort A-Z";
-              });
+            if (!isSorted) {
+              // Sort A–Z
+              cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+              cards.forEach(card => container.appendChild(card));
+              sortButton.dataset.sorted = "true";
+              sortButton.textContent = "Sort Newest";
+            } else {
+              // Restore original order (newest)
+              const originalCards = JSON.parse(container.dataset.originalOrder);
+              container.innerHTML = originalCards.join("");
+              sortButton.dataset.sorted = "false";
+              sortButton.textContent = "Sort A–Z";
+            }
+          });
           });
       </script>
 
@@ -241,6 +272,44 @@
           });
       });
     });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const deluxeCards = document.querySelectorAll(".grid-review-card[data-deluxe]");
+
+    deluxeCards.forEach(card => {
+      const img = card.querySelector("img");
+      const originalSrc = img.src;
+      const deluxeSrc = card.dataset.deluxe;
+
+      card.addEventListener("mouseenter", () => {
+        img.src = deluxeSrc;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        img.src = originalSrc;
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const deluxeCards = document.querySelectorAll(".mrp-card[data-deluxe]");
+
+    deluxeCards.forEach(card => {
+      const bgDiv = card.querySelector(".background");
+      const originalBG = bgDiv.style.backgroundImage;
+      const deluxeBG = `url(${card.dataset.deluxe})`;
+
+      card.addEventListener("mouseenter", () => {
+        bgDiv.style.backgroundImage = deluxeBG;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        bgDiv.style.backgroundImage = originalBG;
+      });
+    });
+  });
 </script>
 
 <script src="datascript.js"></script>

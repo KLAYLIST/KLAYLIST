@@ -538,7 +538,7 @@
   /* Grid Review Card */
 
   .grid-review-card {
-    background-color: black;
+    background-color: var(--b2gr);
     border-radius: 8px;
     width: 100%;
     max-width: 400px; 
@@ -554,7 +554,7 @@
   }
 
   .grid-review-card:hover {
-    box-shadow: 0px 0px 20px #888888;
+    box-shadow: 2px 2px 8px #ffffff;
   }
 
   .grid-review-card img {
@@ -567,6 +567,33 @@
   .grid-review-card, h3 p {
     text-align: center;
     color: white;
+  }
+
+  .grid-review-card img {
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .grid-review-card.hovering img {
+    opacity: 0;
+  }
+
+  .mrp-card .background {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mrp-card .background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .mrp-card.hovering .background::after {
+    opacity: 1;
   }
 
   .flex5 {
@@ -896,10 +923,13 @@ input {
     position: relative;
   }
   footer a {
-    color: var(--link-color);
+    color: #036f03;
   }
   footer a:hover {
     text-decoration: underline;
+  }
+  footer p {
+    color: var(--bg-color2);
   }
 
 
@@ -1838,7 +1868,7 @@ input {
   }
 
   .yap-card.medium {
-    height: 320px;
+    height: 340px;
   }
 
   .yap-card.large {
@@ -2055,6 +2085,33 @@ input {
   width: 100%;
   height: 220px;
   object-fit: cover;
+}
+
+.exclusive-filter-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--b2gr);
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.exclusive-filter-btn.active {
+    background-color: var(--b2g);
+    color: var(--bg-color2);
+}
+
+#exclusiveSearchBar {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 8px 12px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 @media (max-width: 1290px) {
@@ -3127,7 +3184,6 @@ footer {
   padding: 1rem;
   background-color: var(--header-bg);
   color: var(--header-text);
-  margin-top: 150px;
 }
 
 
@@ -3693,7 +3749,7 @@ footer {
   }
 
   .yap-card h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
   }
 
@@ -3756,6 +3812,10 @@ footer {
   #popupTitle {
     font-size: 15px;
     margin-bottom: 10px;
+  }
+
+  .yap-card.large {
+    height: fit-content;
   }
 
 }

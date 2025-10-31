@@ -29,11 +29,11 @@
 <header>
 <div class="y-heading">
   <h1 id="y-header">YAP MAGAZINE</h1>
-  <input type="text" id="searchBar" placeholder="Search for artists, songs, or thoughts...">
+  <!-- <input type="text" id="searchBar" placeholder="Search for artists, songs, or thoughts..."> -->
 </div>
 </header>
 
-<div class="spacious">
+<!-- <div class="spacious">
   <div class="filter-buttons">
     <button class="filter-btn active" data-category="all">All</button>
     <button class="filter-btn" data-category="artist">Artists</button>
@@ -41,7 +41,7 @@
     <button class="filter-btn" data-category="albums">Albums</button>
     <button class="filter-btn" data-category="quiz">Quiz</button>
   </div>
-</div>
+</div> -->
 
 <div class="yap-grid" id="yapGrid"></div>
 
@@ -55,7 +55,19 @@
   </div>
 </div>
 
-<h2 class="y-section-title">YAP EXCLUSIVES</h2>
+<center><h2 class="y-section-title">MORE YAPS</h2></center>
+
+<input type="text" id="exclusiveSearchBar" placeholder="Search exclusive yaps...">
+
+<div class="spacious">
+  <div class="exclusive-filter-buttons">
+    <button class="exclusive-filter-btn active" data-category="all">All</button>
+    <button class="exclusive-filter-btn" data-category="artist">Artists</button>
+    <button class="exclusive-filter-btn" data-category="albums">Albums</button>
+    <button class="exclusive-filter-btn" data-category="yap">Yaps</button>
+  </div>
+</div>
+
 <div class="yap-grid exclusive-grid" id="exclusiveYapGrid"></div>
 
 <footer>
@@ -79,6 +91,15 @@ const yaps = [
         text: "Follow Her Social",
         url: "https://www.instagram.com/xellared/?hl=en"
     },
+  },
+  {
+    title: "HYPED: 'Elmer' by My Favorite Color drops 10/31/2025",
+    image: "../KLAYLIST/covers/MyFavoriteColor/Elmer.jpg",
+    snippet: "I'm buying that CD ASAP!",
+    text: "My Favorite Color is returning with his first independent project in years and I'm honestly really hyped for it. As soon as those CDs go up for sale I'm copping one.",
+    size: "large",
+    category: "albums",
+    spotifyUrl: "https://open.spotify.com/embed/track/3Jthto16oeMcxyrM27xnhN?utm_source=generator"
   },
   {
     title: "First Impression: AMERIKA’S NEXT TOP PARTY!",
@@ -122,39 +143,21 @@ const yaps = [
     spotifyUrl: "https://open.spotify.com/embed/track/0t9WTd6vD1mTpaSB0dqiB4?utm_source=generator&theme=0"
   },
   {
-    title: "Steve Lacy Update",
-    image: "../KLAYLIST/artists/SteveLacy.png",
-    snippet: "The question is, have I started listening to his music yet?",
-    text: "Answer: No.",
+    title: "My Most Anticipated Release: 'STARDUST'",
+    image: "../KLAYLIST/covers/DannyBrown/Stardust.jpg",
+    snippet: "Danny Brown? Album? 2025? I'm HERE for it!",
+    text: "Ever since I heard the 'Copycat' single and seen the tracklist, I've been hyped to hear what's new from Danny Brown. Seems he's got a new style going.",
     size: "large",
     category: "yap"
   },
-  {
-    title: "QUIZ:",
-    image: "../KLAYLIST/artists/Tyler.jpg",
-    snippet: "What is my project from favorite Tyler, The Creator?",
-    text: "Answer: Flower Boy",
-    size: "large",
-    category: "quiz"
-  },
-  {
-    title: "Why Do People Hate This Song So Much???",
-    image: "../KLAYLIST/artists/JCole.PNG",
-    snippet: "I'm never gonna let this go...",
-    text: "I'll say this again. 'Foldin Clothes' is. a. GOOD. SONG! I don't understand why this is highly regarded as a bad J. Cole song. The vibes are great and the poetic stretch in the end is amazing!",
-    size: "large",
-    category: "yap",
-    spotifyUrl: "https://open.spotify.com/embed/track/77IAeEz8LEchPN8UNjaTJ2?utm_source=generator"
-  },
-  {
-    title: "Song On Repeat: 'Dancing Circles 2.0'",
-    image: "../KLAYLIST/artists/Sampha.jpg",
-    snippet: "DANCINGGGGGG!",
-    text: "This song does something to me. Now that the Fall weather has officially begun out here in Texas, it hits even harder. Such a vibe!",
-    size: "large",
-    category: "yap",
-    spotifyUrl: "https://open.spotify.com/embed/track/3C5eqElWp0s4of3vTU37bF?utm_source=generator"
-  },
+  // {
+  //   title: "QUIZ:",
+  //   image: "../KLAYLIST/artists/Tyler.jpg",
+  //   snippet: "What is my project from favorite Tyler, The Creator?",
+  //   text: "Answer: Flower Boy",
+  //   size: "large",
+  //   category: "quiz"
+  // },
 ];
 
 // Generate Yap cards dynamically
@@ -259,23 +262,42 @@ searchBar.addEventListener('input', e => {
 
 <script>
   const exclusiveYaps = [
-    {
-      title: "Exclusive Drop: The New Sound of 2025",
-      image: "../KLAYLIST/covers/BLUE LIPS.png",
-      snippet: "A deep dive into emerging underground artists.",
-      text: "These artists are redefining the genre scene with bold new sounds...",
-      size: "large",
-      category: "exclusive"
-    },
-    {
-      title: "Behind The Mic: Studio Secrets",
-      image: "../KLAYLIST/ph.png",
-      snippet: "An inside look at the recording process.",
-      text: "From mic placement to late-night sessions, here’s how hits are born.",
-      size: "large",
-      category: "exclusive"
-    }
-  ];
+  {
+    title: "This Album Is Really Weird And I Love It!",
+    image: "../KLAYLIST/covers/MonteBooker/noise.jpg",
+    snippet: "Honestly, this is such a great listen",
+    text: "Monte Booker really did his thing with this one. This album has me catching a strange vibe but in the best way possible.",
+    size: "medium",
+    category: "albums",
+    spotifyUrl: "https://open.spotify.com/embed/track/0t9WTd6vD1mTpaSB0dqiB4?utm_source=generator&theme=0"
+  },
+  {
+    title: "Why Do People Hate This Song So Much???",
+    image: "../KLAYLIST/artists/JCole.PNG",
+    snippet: "I'm never gonna let this go...",
+    text: "I'll say this again. 'Foldin Clothes' is. a. GOOD. SONG! I don't understand why this is highly regarded as a bad J. Cole song. The vibes are great and the poetic stretch in the end is amazing!",
+    size: "medium",
+    category: "yap",
+    spotifyUrl: "https://open.spotify.com/embed/track/77IAeEz8LEchPN8UNjaTJ2?utm_source=generator"
+  },
+  {
+    title: "Song On Repeat: 'Dancing Circles 2.0'",
+    image: "../KLAYLIST/artists/Sampha.jpg",
+    snippet: "DANCINGGGGGG!",
+    text: "This song does something to me. Now that the Fall weather has officially begun out here in Texas, it hits even harder. Such a vibe!",
+    size: "medium",
+    category: "yap",
+    spotifyUrl: "https://open.spotify.com/embed/track/3C5eqElWp0s4of3vTU37bF?utm_source=generator"
+  },
+  {
+    title: "Steve Lacy Update",
+    image: "../KLAYLIST/artists/SteveLacy.png",
+    snippet: "The question is, have I started listening to his music yet?",
+    text: "Answer: No.",
+    size: "medium",
+    category: "yap"
+  },
+];
 
   const exclusiveGrid = document.getElementById('exclusiveYapGrid');
 
@@ -296,6 +318,31 @@ searchBar.addEventListener('input', e => {
     });
   }
   renderExclusiveYaps(exclusiveYaps);
+
+  document.querySelectorAll('.exclusive-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.exclusive-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.dataset.category;
+      if (category === "all") {
+        renderExclusiveYaps(exclusiveYaps);
+      } else {
+        const filtered = exclusiveYaps.filter(yap => yap.category === category);
+        renderExclusiveYaps(filtered);
+      }
+    });
+  });
+
+  const exclusiveSearchBar = document.getElementById('exclusiveSearchBar');
+  exclusiveSearchBar.addEventListener('input', e => {
+    const query = e.target.value.toLowerCase();
+    const filtered = exclusiveYaps.filter(yap =>
+      yap.title.toLowerCase().includes(query) ||
+      yap.snippet.toLowerCase().includes(query)
+    );
+    renderExclusiveYaps(filtered);
+  });
 </script>
 
 </body>
