@@ -1994,10 +1994,13 @@ input {
 
   .close-btn {
     position: absolute;
-    top: 12px; right: 10px;
-    font-size: 1.6rem;
+    top: 12px; right: -10px;
+    font-size: 3rem;
     color: #fff;
     cursor: pointer;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 125px;
   }
 
   #popupImage {
