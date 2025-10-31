@@ -1994,11 +1994,11 @@ input {
 
   .close-btn {
     position: absolute;
-    top: 12px; right: -10px;
+    top: 12px; right: 10px;
     font-size: 3rem;
     color: #fff;
     cursor: pointer;
-    background-color: #1a1a1a;
+    background-color: var(--bg-color);
     padding: 1rem;
     border-radius: 125px;
   }
