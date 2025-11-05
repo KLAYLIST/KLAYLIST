@@ -957,7 +957,7 @@ input {
     display: flex;
     justify-content: center;
     margin: 2rem;
-    background-color: var(--toggle-bg);
+    background-color: var(--b2gr);
     color: var(--text-color);
     padding: 1.5rem;
     border-radius: 8px;
@@ -1362,7 +1362,6 @@ input {
   .spin-card-container {
     perspective: 1000px;
     margin-top: 7rem;
-
   }
   
   #spin-card {
@@ -1792,10 +1791,10 @@ input {
 
 .scroll-wrapper1 {
     overflow-x: auto;
-    display: none; /* Hidden by default */
+    display: none;
     white-space: nowrap;
     padding: 10px;
-    background: #f8f8f8;
+    background-color: var(--b2gr);
 }
 
 /* Yap Page */
@@ -2111,7 +2110,7 @@ input {
   display: block;
   margin: 10px auto 30px auto;
   padding: 8px 12px;
-  width: 80%;
+  width: 50%;
   border-radius: 10px;
   border: 1px solid #aaa;
   font-size: 16px;
@@ -2150,6 +2149,7 @@ input {
     .scroll-wrapper1 {
         -ms-overflow-style: none;
         scrollbar-width: none;
+        background-color: var(--b2gr);
     }
 }
 
@@ -3204,6 +3204,214 @@ footer {
   height: 50px;
 }
 
+/* List CSS */
+
+.list-introduction {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.list-introduction h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.header-img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.li-line {
+  background-color: var(--b2gr);
+  height: 3px;
+  width: 30%;
+  margin-bottom: 25px;
+}
+
+.list-introduction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-introduction p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  line-height: 40px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.list-item {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.list-item-img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: solid 5px var(--b2gr);
+  overflow: hidden;
+}
+
+.list-item-img img {
+  width: 100%;
+  height: 100%;
+  transition: .2s ease-in-out;
+}
+
+.list-item-img img:hover {
+  transform: scale(1.2)
+}
+
+.pos-number {
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  background-color: var(--b2gr);
+  bottom: 0;
+  border-top-right-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pos-number h1 {
+  color: white;
+  margin-right: 8px;
+}
+
+.list-item-text {
+  position: relative;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-item-text h3 {
+  font-size: 15px;
+}
+
+.t5-card {
+   display: flex;
+   padding: 30px;
+   height: fit-content;
+   width: 100%;
+   background-color: var(--b2g);
+   border-radius: 25px;
+}
+
+.t5-sbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.t5-img {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t5-img img {
+  width: 500px;
+  height: 500px;
+}
+
+.t5-text {
+  width: 60%;
+  height: 100%;
+}
+
+.t5-text p {
+  padding: 20px;
+  font-size: 18px;
+  min-height: 400px;
+}
+
+.t5-t-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+/* List Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--bg-color, #fff);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease;
+  position: relative;
+}
+
+.modal-content img {
+  width: 80%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 /* Media Queries */
 
 @media (max-width: 630px) {
@@ -4098,6 +4306,14 @@ footer {
     right: 0;
   }
 
+  .spin-card-container {
+    perspective: 1000px;
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 @media (max-width: 850px) {
@@ -4217,6 +4433,80 @@ footer {
     right: 40px;
   }   */
 
+  .list-introduction h1 {
+    font-size: 30px;
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .list-item {
+    position: relative;
+    width: 160px;
+    height: fit-content;
+    cursor: pointer;
+    margin: 15px;
+  }
+
+  .list-item-img {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border: solid 5px var(--b2gr);
+    overflow: hidden;
+  }
+
+  .list-item-img img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-in-out;
+  }
+
+  .list-item-img img:hover {
+    transform: scale(1.2)
+  }
+
+  .pos-number {
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    background-color: var(--b2gr);
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pos-number h1 {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .list-item-text {
+    display: flex;
+    position: relative;
+    text-align: center;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .list-item-text h3 {
+    font-size: 15px;
+    width: 95%;
+  }
+  
 }
 
 @media (max-width: 1200px) {
